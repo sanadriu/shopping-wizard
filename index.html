@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"></div>
+    </header>
+    <main>
+      <!-- Product -->
+      <article class="product">
+        <div class="product__thumbnails">
+          <ul class="product__thumbnail-list">
+            <li>
+              <img
+                class="product__thumbnail"
+                src="assets/images/product/black/cap-black-view1.webp"
+                alt="Cap with adjustable closure, 1st view"
+              />
+            </li>
+            <li>
+              <img
+                class="product__thumbnail"
+                src="assets/images/product/black/cap-black-view2.webp"
+                alt="Cap with adjustable closure, 2nd view"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="product__view">
+          <img
+            class="product__view-img"
+            src="assets/images/product/black/cap-black-view1.webp"
+            alt="Cap with adjustable closure, Primary View"
+          />
+        </div>
+        <div class="product__info">
+          <h2 class="product__title">Cap with adjustable closure</h2>
+          <span class="product__property">Price</span>
+          <span class="product__value">30€</span>
+          <span class="product__property">Size</span>
+          <select class="product__value product__select" name="size">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M" selected>M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <span>Color</span>
+          <ul class="product__color-list">
+            <li>
+              <img
+                class="product__color-timb"
+                src="assets/images/product/black/cap-black-view1.webp"
+                alt="Cap with adjustable closure, black"
+              />
+            </li>
+            <li>
+              <img
+                class="product__color-timb"
+                src="assets/images/product/brown/cap-brown-view1.webp"
+                alt="Cap with adjustable closure, brown"
+              />
+            </li>
+            <li>
+              <img
+                class="product__color-timb"
+                src="assets/images/product/navy/cap-navy-view1.webp"
+                alt="Cap with adjustable closure, navy"
+              />
+            </li>
+            <li>
+              <img
+                class="product__color-timb"
+                src="assets/images/product/olive/cap-olive-view1.webp"
+                alt="Cap with adjustable closure, olive"
+              />
+            </li>
+            <li>
+              <img
+                class="product__color-timb"
+                src="assets/images/product/red/cap-red-view1.webp"
+                alt="Cap with adjustable closure, red"
+              />
+            </li>
+            <li>
+              <img
+                class="product__color-timb"
+                src="assets/images/product/yellow/cap-yellow-view1.webp"
+                alt="Cap with adjustable closure, yellow"
+              />
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!--second slide-->
+      <div class="steps">
+        <span>profile</span>
+        <span>address</span>
+        <span>shipping</span>
+      </div>
+      <form action="">
+        <label for="">Username</label><br />
+        <input type="text" id="username" name="username" /><br />
+        <label for="email">email:</label><br />
+        <input type="email" id="email" name="email" /><br />
+        <label for="">Password</label><br />
+        <input type="password" id="password" name="password" /><br />
+        <div class="foot">
+          <br />
+          <button class="clean">clean form</button>
+          <input type="submit" value="next" />
+        </div>
+      </form>
+      <div class="address">
+        <form action="">
+          <label for="">First name</label><br />
+          <input type="text" id="names" name="firstname" /><br />
+          <label for="">Last name</label><br />
+          <input type="text" id="names" name="lastname" /><br />
+          <!--aqui ya decidiremos que formato elegir (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month)-->
+          <label for="birthday">Birthday</label><br />
+          <input type="month" id="bdaymonth" name="bdaymonth" /><br />
+          <label for="">Address 1</label><br />
+          <input type="text" id="address" name="addres" /><br />
+          <label for="">Address 2</label><br />
+          <input type="text" id="address" name="addres" /><br />
+        </form>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
 </html>

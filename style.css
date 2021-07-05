@@ -1,0 +1,95 @@
+/* Importing Google Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/* Defaults */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Header Styles */
+
+header {
+  background-color: black;
+  height: 3rem;
+}
+
+/* Product Styles */
+
+.product {
+  margin: 0 auto;
+  width: 960px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__thumbnails {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product__thumbnail-list {
+  padding: 0;
+  list-style: none;
+}
+
+.product__thumbnail {
+  width: 100%;
+}
+
+.product__view {
+  width: 45%;
+  padding: 2rem;
+}
+
+.product__view-img {
+  width: 100%;
+}
+
+.product__info {
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product__title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.product__property {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.product__value {
+  margin-bottom: 1rem;
+}
+
+.product__select {
+  outline: none;
+  padding: 0.5rem;
+  width: 4rem;
+}
+
+.product__color-list {
+  padding: 0;
+  list-style: none;
+}
+
+.product__color-timg {
+  width: 1.5rem;
+}
