@@ -35,12 +35,12 @@
                 <span class="product__value product__price">30€</span>
                 <span class="product__property">Size</span>
                 <select class="product__value product__select" name="size">
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M" selected>M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M" selected>M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
                 <span class="product__property">Color</span>
                 <ul class="product__value product__color-list">
                     <li>
@@ -65,104 +65,91 @@
                 <button class="product__btn">Buy</button>
             </div>
         </article>
-        <div class="checkout-progress">
-            <div class="checkout-progress__stages">
-                <div class="checkout-progress__stage">
-                    <span class="stage-name">Profile</span>
-                    <div class="stage-signal"></div>
-                </div>
-                <div class="checkout-progress__stage">
-                    <span class="stage-name">Address</span>
-                    <div class="stage-signal"></div>
-                </div>
-                <div class="checkout-progress__stage">
-                    <span class="stage-name">Shipping</span>
-                    <div class="stage-signal"></div>
-                </div>
-                <div class="checkout-progress__stage">
-                    <span class="stage-name">Finish</span>
-                    <div class="stage-signal"></div>
-                </div>
-            </div>
-            <progress class="checkout-progress__bar" value="2" min="0" max="3"></progress>
-        </div>
-        <!-- Profile Stage -->
-        <div>
-            <h1>Profile</h1>
-            <form action="">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" />
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" />
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" />
-                <label for="password_confirmation">Password confirmation</label>
-                <input type="password" id="password_confirmation" name="password" />
-                <div class="submit__container">
-                    <div class="submitButtons__wrap">
-                        <input type="reset" value="Clean Form" class="cleanButton">
-                        <input type="submit" value="Next" class="nextButton" />
+        <div class="wizard">
+            <section class="wizard__progress">
+                <div class="wizard__progress-stages">
+                    <div class="wizard__progress-stage">
+                        <span class="stage-name">Profile</span>
+                        <div class="stage-signal"></div>
+                    </div>
+                    <div class="wizard__progress-stage">
+                        <span class="stage-name">Address</span>
+                        <div class="stage-signal"></div>
+                    </div>
+                    <div class="wizard__progress-stage">
+                        <span class="stage-name">Shipping</span>
+                        <div class="stage-signal"></div>
+                    </div>
+                    <div class="wizard__progress-stage">
+                        <span class="stage-name">Finish</span>
+                        <div class="stage-signal"></div>
                     </div>
                 </div>
-            </form>
+                <progress class="wizard__progress-bar" value="2" min="0" max="3"></progress>
+            </section>
+            <section class="wizard__form">
+                <form action="">
+                    <h1 class="wizard__form-title">Profile</h1>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" />
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" />
+                    <label for="password_confirmation">Password confirmation</label>
+                    <input type="password" id="password_confirmation" name="password" />
+                    <div class="wizard__controls">
+                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                        <input type="submit" value="Next" class="wizard-btn next-btn" />
+                    </div>
+                </form>
+                <form action="" class="is-hidden">
+                    <h1 class="wizard__form-title">Address</h1>
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="firstname" />
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="lastname" />
+                    <label for="birthdate">Birth Date</label>
+                    <input type="date" id="birthdate" name="birthdate" />
+                    <label for="address_1">Address 1</label>
+                    <input type="text" id="address_1" name="address_1" />
+                    <label for="address_2">Address 2</label>
+                    <input type="text" id="address_2" name="address_2" />
+                    <label for="zipcode">Postal code</label>
+                    <input type="number" id="zipcode" name="zipcode" minlength="5" maxlength="5" />
+                    <label for="country">Country</label>
+                    <select class="country" name="country">
+                        <option value="Andorra">Andorra</option>
+                        <option value="Spain">Spain</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Greece">Greece</option>
+                    </select>
+                    <label for="phonenumber">Phone Number</label>
+                    <select class="prefix" name="prefix">
+                        <option value="Andorra">(+376) Andorra</option>
+                        <option value="Spain">(+34) Spain</option>
+                        <option value="France">(+33) France</option>
+                        <option value="Germany">(+49) Germany</option>
+                        <option value="Greece">(+30) Greece</option>
+                    </select>
+                    <label for="checkboxAddress"><input type="tel" id="phonenumber" name="phonenumber" maxlength="9" /><input type="checkbox" id="checkboxAddress" value="checkbox_address"/>This is my regular address</label>
+                    <div class="wizard__controls">
+                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                        <input type="submit" value="Next" class="wizard-btn next-btn" />
+                    </div>
+                </form>
+            </section>
         </div>
 
-        <!-- Address Stage -->
-        <div class="address">
-            <h1>Address</h1>
-            <form action="">
-                <label for="firstName">First name</label>
-                <input type="text" id="firstName" name="firstname" class="address__form" />
-                <label for="lastName">Last name</label>
-                <input type="text" id="lastName" name="lastname" class="address__form" />
-                <label for="bdaymonth">Birth Date</label>
-                <input type="date" id="birthdate" name="birthdate" class="address__form" />
-                <label for="address1">Address 1</label>
-                <input type="text" id="address1" name="address" class="address__form" />
-                <label for="address2">Address 2</label>
-                <input type="text" id="address2" name="address" class="address__form" />
-                <label for="postal">Postal code</label>
-                <input type="number" id="postal" name="postal" minlength="5" maxlength="5" class="address__form" />
-
-                <label for="country">Country</label><br />
-                <select class="country" name="country">
-            <option value="Andorra">Andorra</option>
-            <option value="Spain">Spain</option>
-            <option value="France">France</option>
-            <option value="Germany">Germany</option>
-            <option value="Greece">Greece</option>
-          </select>
-
-                <label for="phonenumber">Phone Number</label>
-                <select class="prefix" name="prefix">
-            <option value="Andorra">(+376) Andorra</option>
-            <option value="Spain">(+34) Spain</option>
-            <option value="France">(+33) France</option>
-            <option value="Germany">(+49) Germany</option>
-            <option value="Greece">(+30) Greece</option>
-          </select>
-                <input type="tel" id="phonenumber" name="phonenumber" maxlength="9" />
-
-                <label for="checkboxAddress"><input
-              type="checkbox"
-              id="checkboxAddress"
-              value="checkbox_address"
-            />
-            This is my regular address</label
-          >
-        </form>
-      </div>
-      <!----------------------------------------------step 3 Shipping------------------------------------------>
-      <div class="shipping">
-        <h1>Shipping</h1>
-        <h3>shipping type (72H)</h3>
-        <form class="shipping">
-          <input type="radio" id="type" name="shipping" value="free" />
-          <label for="free">Free shipment (72H)</label>
-                <input type="radio" id="type" name="shipping" value="extra" />
-                <label for="Extra">Extra shipping (48h) <strong>4,99€</strong></label>
-                <input type="radio" id="type" name="shipping" value="premium" />
-                <label for="premium">Premium (24h)<strong>9,99€</strong></label>
+        <!----------------------------------------------step 3 Shipping------------------------------------------>
+        <div class="shipping">
+            <h1>Shipping</h1>
+            <h3>Shipping type (72H)</h3>
+            <form class="shipping">
+                <label for="shipping_free"><input type="radio" id="type" name="shipping" value="free" /> Free shipment (72H)</label>
+                <label for="shipping_extra"><input type="radio" id="type" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
+                <label for="shipping_premium"><input type="radio" id="type" name="shipping" value="premium" /> Premium (24h)<strong>9,99€</strong></label>
             </form>
             <div>
                 <input type="checkbox" name="gift" value="gift">
@@ -173,26 +160,45 @@
                 <p>ESTIMATE DELIVERY DATE:</p>
                 <p>aqui va el js de date + horas</p>
             </div>
-            <div class="giftMensagge">
+            <div class="giftMessage">
                 <p>Gift Message</p>
-                <textarea rows="4" cols="50" name="comment" form="usrform"> </textarea>
+                <textarea rows="4" cols="30" name="comment" form="usrform"> </textarea>
+                <h5>Gift wrapper image</h5>
+                <input type="file" id="myfile" name="myfile">
+                </input>
             </div>
-
-
-
-            <!----------------------------------------Step 4 Finish---------------------------------------------->
-            <div class="finish-container">
-                <div class="finish-your-purchase"> holahola</div>
-                <div class="finish-your-order"> holahola </div>
+            <div class="wizard__controls">
+                <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                <input type="submit" value="Next" class="wizard-btn next-btn" />
             </div>
+        </div>
+        <!----------------------------------------Step 4 Finish---------------------------------------------->
+        <div class="finish-container">
 
+            <div class="finish-your-purchase">
+                <div class="finish-your-purchase-text"> Your purchase</div>
+                <div class="finish-your-purchase-img-description">
+                    <div class="purchase-image"> *IMAGE OF THE PURCHASE*</div>
+                    <div class="purchase-description"> DESCRIPTION </div>
+                </div>
+                <div class="finish-your-purchase-terms-buyBtn">
+                    <div class="finish-terms-and-conditions">
+                        <label><input type="checkbox" id="cbox1" value="first_checkbox"> I have read the terms and conditions</label>
 
+                        <button class="finish-buyBtn">Buy</button>
 
+                    </div>
+                </div>
+            </div>
+            <div class="finish-your-order"> holahola </div>
+        </div>
 
     </main>
     <footer class="footer">
         <h2 class="footer-text">Just a website developed without &#9829;</h2>
     </footer>
 </body>
+
+</html>
 
 </html>
