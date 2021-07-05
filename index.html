@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo"></div>
+      <h1 class="logo">Buy This Cap :D</h1>
     </header>
     <main>
       <!-- Product -->
@@ -42,7 +42,7 @@
         <div class="product__info">
           <h2 class="product__title">Cap with adjustable closure</h2>
           <span class="product__property">Price</span>
-          <span class="product__value">30€</span>
+          <span class="product__value product__price">30€</span>
           <span class="product__property">Size</span>
           <select class="product__value product__select" name="size">
             <option value="XS">XS</option>
@@ -51,90 +51,213 @@
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
-          <span>Color</span>
-          <ul class="product__color-list">
+          <span class="product__property">Color</span>
+          <ul class="product__value product__color-list">
             <li>
               <img
-                class="product__color-timb"
+                class="product__color-timg"
                 src="assets/images/product/black/cap-black-view1.webp"
                 alt="Cap with adjustable closure, black"
               />
             </li>
             <li>
               <img
-                class="product__color-timb"
+                class="product__color-timg"
                 src="assets/images/product/brown/cap-brown-view1.webp"
                 alt="Cap with adjustable closure, brown"
               />
             </li>
             <li>
               <img
-                class="product__color-timb"
+                class="product__color-timg"
                 src="assets/images/product/navy/cap-navy-view1.webp"
                 alt="Cap with adjustable closure, navy"
               />
             </li>
             <li>
               <img
-                class="product__color-timb"
+                class="product__color-timg"
                 src="assets/images/product/olive/cap-olive-view1.webp"
                 alt="Cap with adjustable closure, olive"
               />
             </li>
             <li>
               <img
-                class="product__color-timb"
+                class="product__color-timg"
                 src="assets/images/product/red/cap-red-view1.webp"
                 alt="Cap with adjustable closure, red"
               />
             </li>
             <li>
               <img
-                class="product__color-timb"
+                class="product__color-timg"
                 src="assets/images/product/yellow/cap-yellow-view1.webp"
                 alt="Cap with adjustable closure, yellow"
               />
             </li>
           </ul>
+          <button class="product__btn">Buy</button>
         </div>
       </article>
-
-      <!--second slide-->
-      <div class="steps">
-        <span>profile</span>
-        <span>address</span>
-        <span>shipping</span>
-      </div>
-      <form action="">
-        <label for="">Username</label><br />
-        <input type="text" id="username" name="username" /><br />
-        <label for="email">email:</label><br />
-        <input type="email" id="email" name="email" /><br />
-        <label for="">Password</label><br />
-        <input type="password" id="password" name="password" /><br />
-        <div class="foot">
-          <br />
-          <button class="clean">clean form</button>
-          <input type="submit" value="next" />
+      <div class="checkout-progress">
+        <div class="checkout-progress__stages">
+          <div class="checkout-progress__stage">
+            <span class="stage-name">Profile</span>
+            <div class="stage-signal"></div>
+          </div>
+          <div class="checkout-progress__stage">
+            <span class="stage-name">Address</span>
+            <div class="stage-signal"></div>
+          </div>
+          <div class="checkout-progress__stage">
+            <span class="stage-name">Shipping</span>
+            <div class="stage-signal"></div>
+          </div>
+          <div class="checkout-progress__stage">
+            <span class="stage-name">Finish</span>
+            <div class="stage-signal"></div>
+          </div>
         </div>
-      </form>
-      <div class="address">
+        <progress class="checkout-progress__bar" value="2" min="0" max="3"></progress>
+      </div>
+      <!-- Profile Stage -->
+      <div>
+        <h1>Profile</h1>
         <form action="">
-          <label for="">First name</label><br />
-          <input type="text" id="names" name="firstname" /><br />
-          <label for="">Last name</label><br />
-          <input type="text" id="names" name="lastname" /><br />
-          <!--aqui ya decidiremos que formato elegir (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/month)-->
-          <label for="birthday">Birthday</label><br />
-          <input type="month" id="bdaymonth" name="bdaymonth" /><br />
-          <label for="">Address 1</label><br />
-          <input type="text" id="address" name="addres" /><br />
-          <label for="">Address 2</label><br />
-          <input type="text" id="address" name="addres" /><br />
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+          <label for="password_confirmation">Password confirmation</label>
+          <input type="password" id="password_confirmation" name="password" />
+          <div class="submit__container">
+            <div class="submitButtons__wrap">
+              <input type="reset" value="Clean Form" class="cleanButton">
+              <input type="submit" value="Next" class="nextButton" />
+            </div>
+          </div>
         </form>
       </div>
-    </main>
+      
+      <!-- Address Stage -->
+      <div class="address">
+        <h1>Address</h1>
+        <form action="">
+          <label for="firstName">First name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstname"
+            class="address__form"
+          />
+          <label for="lastName">Last name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastname"
+            class="address__form"
+          />
+          <label for="bdaymonth">Birth Date</label>
+          <input
+            type="date"
+            id="birthdate"
+            name="birthdate"
+            class="address__form"
+          />
+          <label for="address1">Address 1</label>
+          <input
+            type="text"
+            id="address1"
+            name="address"
+            class="address__form"
+          />
+          <label for="address2">Address 2</label>
+          <input
+            type="text"
+            id="address2"
+            name="address"
+            class="address__form"
+          />
+          <label for="postal">Postal code</label>
+          <input
+            type="number"
+            id="postal"
+            name="postal"
+            minlength="5"
+            maxlength="5"
+            class="address__form"
+          />
 
-    <footer></footer>
+          <label for="country">Country</label><br />
+          <select class="country" name="country">
+            <option value="Andorra">Andorra</option>
+            <option value="Spain">Spain</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+          </select>
+
+          <label for="phonenumber">Phone Number</label>
+          <select class="prefix" name="prefix">
+            <option value="Andorra">(+376) Andorra</option>
+            <option value="Spain">(+34) Spain</option>
+            <option value="France">(+33) France</option>
+            <option value="Germany">(+49) Germany</option>
+            <option value="Greece">(+30) Greece</option>
+          </select>
+          <input type="tel" id="phonenumber" name="phonenumber" maxlength="9" />
+
+          <label for="checkboxAddress"
+            ><input
+              type="checkbox"
+              id="checkboxAddress"
+              value="checkbox_address"
+            />
+            This is my regular address</label
+          >
+        </form>
+      </div>
+      <!----------------------------------------------step 3 Shipping------------------------------------------>
+      <div class="shipping">
+        <h1>Shipping</h1>
+        <h3>shipping type (72H)</h3>
+        <form class="shipping">
+          <input type="radio" id="type" name="shipping" value="free" />
+          <label for="free">Free shipment (72H)</label>
+          <input type="radio" id="type" name="shipping" value="extra" />
+          <label for="Extra">Extra shipping (48h) <strong>4,99€</strong></label>
+          <input type="radio" id="type" name="shipping" value="premium" />
+          <label for="premium">Premium (24h)<strong>9,99€</strong></label>
+        </form>
+        <div>
+          <input type="checkbox" name="gift" value="gift">
+          <label for="gift">Is it a gift?</label>
+      </div>
+        <div class="arrive">
+          <h5>Your order will arrive:</h5>
+          <p>ESTIMATE DELIVERY DATE:</p>
+          <p>aqui va el js de date + horas</p>
+        </div>
+        <div class="g">
+          <p>Gift Message</p>
+          <input class="mensagge"/>
+
+
+
+          <!----------------------------------------Step 4 Finish---------------------------------------------->
+           <div class="finish-container">
+             <div class="finish-your-purchase"> holahola</div>
+             <div class="finish-your-order"> holahola </div>
+           </div>
+
+
+
+
+    </main>
+    <footer class="footer">
+      <h2 class="footer-text">Just a website developed without &#9829;</h2>
+    </footer>
   </body>
 </html>
