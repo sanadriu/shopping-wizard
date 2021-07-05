@@ -1,315 +1,328 @@
-/* Importing Google Fonts*/
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
-/* Defaults */
-
-progress[value] {
-  appearance: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-}
-
-/* Header Styles */
-
-.header {
-  color: white;
-  background-color: black;
-  padding: 1.5rem;
-}
-
-.logo {
-  font-family: "Pacifico", sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* Main Styles */
-
-main {
-  margin-bottom: 6rem;
-}
-
-/* Product Styles */
-
-.product {
-  margin: 0 auto;
-  width: 960px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.product__thumbnails {
-  width: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.product__thumbnail-list {
-  list-style: none;
-}
-
-.product__thumbnail {
-  width: 100%;
-  cursor: pointer;
-}
-
-.product__view {
-  width: 55%;
-  padding: 0 2rem;
-}
-
-.product__view-img {
-  width: 100%;
-}
-
-.product__info {
-  padding: 1rem;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.product__title {
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.product__price {
-  font-size: 2.5rem;
-}
-
-.product__property {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.product__value {
-  margin-bottom: 1rem;
-}
-
-.product__select {
-  outline: none;
-  padding: 0.5rem;
-  width: 4rem;
-}
-
-.product__color-list {
-  list-style: none;
-}
-
-.product__color-list > li {
-  display: inline-block;
-}
-
-.product__color-timg {
-  width: 2rem;
-  margin-right: 0.25rem;
-  cursor: pointer;
-}
-
-.product__btn {
-  border: none;
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-  background-color: black;
-  color: white;
-  font-family: "Open Sans";
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.1s ease-in;
-}
-
-.product__btn:hover {
-  background-color: #4d4d4d;
-}
-
-/* Footer Styles */
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
-
-.footer-text {
-  font-size: 0.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.2ch;
-}
-
-/* Form Styles */
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="number"],
-select {
-  display: block;
-  padding: 0.4rem;
-  margin: 0.5rem 0;
-}
-
-label {
-  font-weight: 600;
-}
-
-.address__form {
-  width: 12rem;
-}
-
-/* Submit Buttons */
-
-.submitButtons__wrap {
-  width: 8rem;
-  display: flex;
-  justify-content: space-around;
-}
-.submit__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 960px;
-  margin: 0 auto;
-  background-color: lightgray;
-}
-.cleanButton {
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-
-.nextButton {
-  border-radius: 5px;
-  background-color: black;
-  color: white;
-}
-
-.cleanButton .
-/* Progress Styles */
-
-.checkout-progress {
-  margin: 0 auto;
-  width: 960px;
-  position: relative;
-}
-
-.checkout-progress__bar {
-  height: 0.8rem;
-  width: 900px;
-  margin: 0 auto;
-
-  position: absolute;
-  top: 2.6rem;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.checkout-progress__bar::-webkit-progress-value {
-  background-color: #d3d3d3;
-  box-shadow: inset 0 0 2px rgb(0, 0, 0);
-}
-
-.checkout-progress__bar::-webkit-progress-bar {
-  background-color: white;
-  box-shadow: inset 0 0 2px rgb(0, 0, 0);
-}
-
-.checkout-progress__stages {
-  display: flex;
-  justify-content: space-between;
-}
-
-.checkout-progress__stage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stage-name {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.stage-signal {
-  margin: 1rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100%;
-  border: 1px solid grey;
-  background-color: white;
-}
-
-/* States */
-
-.is-selected {
-  border: 1px solid grey;
-}
-
-.is-hidden {
-  display: none;
-}
-
-/* step 3 Gift*/
-.message {
-  width: 0;
-}
-
-/* step 4 finish styles*/
-
-.finish-container {
-  background-color: #f5f5f5;
-  margin: 0 auto;
-  width: 960px;
-  height: 500px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.finish-your-purchase {
-  display: flex;
-  background-color: white;
-  width: 400px;
-  height: 30px;
-}
-
-.finish-your-order {
-  display: flex;
-  background-color: white;
-  width: 100px;
-  height: 50px;
-}
+  /* Importing Google Fonts*/
+  
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+  /* Defaults */
+  
+  progress[value] {
+      appearance: none;
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  ul {
+      padding: 0;
+      margin: 0;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+  }
+  /* Header Styles */
+  
+  .header {
+      color: white;
+      background-color: black;
+      padding: 1.5rem;
+  }
+  
+  .logo {
+      font-family: "Pacifico", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+  }
+  /* Main Styles */
+  
+  main {
+      margin-bottom: 6rem;
+  }
+  /* Product Styles */
+  
+  .product {
+      margin: 0 auto;
+      width: 960px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .product__thumbnails {
+      width: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .product__thumbnail-list {
+      list-style: none;
+  }
+  
+  .product__thumbnail {
+      width: 100%;
+      cursor: pointer;
+  }
+  
+  .product__view {
+      width: 55%;
+      padding: 0 2rem;
+  }
+  
+  .product__view-img {
+      width: 100%;
+  }
+  
+  .product__info {
+      padding: 1rem;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .product__title {
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+  }
+  
+  .product__price {
+      font-size: 2.5rem;
+  }
+  
+  .product__property {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+  }
+  
+  .product__value {
+      margin-bottom: 1rem;
+  }
+  
+  .product__select {
+      outline: none;
+      padding: 0.5rem;
+      width: 4rem;
+  }
+  
+  .product__color-list {
+      list-style: none;
+  }
+  
+  .product__color-list>li {
+      display: inline-block;
+  }
+  
+  .product__color-timg {
+      width: 2rem;
+      margin-right: 0.25rem;
+      cursor: pointer;
+  }
+  
+  .product__btn {
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      text-align: center;
+      background-color: black;
+      color: white;
+      font-family: "Open Sans";
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.1s ease-in;
+  }
+  
+  .product__btn:hover {
+      background-color: #4d4d4d;
+  }
+  /* Footer Styles */
+  
+  .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      background-color: black;
+      padding: 1rem;
+  }
+  
+  .footer-text {
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.2ch;
+  }
+  /* Form Styles */
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  select {
+      display: block;
+      padding: 0.4rem;
+      margin: 0.5rem 0;
+  }
+  
+  label {
+      font-weight: 600;
+  }
+  
+  .address__form {
+      width: 12rem;
+  }
+  /* Submit Buttons */
+  
+  .submit__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 960px;
+      margin: 0 auto;
+      background-color: black;
+      margin-top: 5rem;
+  }
+  
+  .submitButtons__wrap {
+      width: 8rem;
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+  .cleanButton {
+      padding: 0.8rem;
+      margin: 0.8rem;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+  }
+  
+  .nextButton {
+      padding: 0.8rem;
+      margin: 0.8rem;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+  }
+  /* Progress Styles */
+  
+  .checkout-progress {
+      margin: 0 auto;
+      width: 960px;
+      position: relative;
+  }
+  
+  .checkout-progress__bar {
+      height: 0.8rem;
+      width: 900px;
+      margin: 0 auto;
+      position: absolute;
+      top: 2.6rem;
+      left: 0;
+      right: 0;
+      z-index: -1;
+  }
+  
+  .checkout-progress__bar::-webkit-progress-value {
+      background-color: #d3d3d3;
+      box-shadow: inset 0 0 2px rgb(0, 0, 0);
+  }
+  
+  .checkout-progress__bar::-webkit-progress-bar {
+      background-color: white;
+      box-shadow: inset 0 0 2px rgb(0, 0, 0);
+  }
+  
+  .checkout-progress__stages {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .checkout-progress__stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .stage-name {
+      font-weight: 600;
+      text-transform: uppercase;
+  }
+  
+  .stage-signal {
+      margin: 1rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 100%;
+      border: 1px solid grey;
+      background-color: white;
+  }
+  /* States */
+  
+  .is-selected {
+      border: 1px solid grey;
+  }
+  
+  .is-hidden {
+      display: none;
+  }
+  /* step 3 Gift*/
+  
+  .mensagge {
+      padding: 30px;
+      font-size: 12px;
+      border-width: 3px;
+      border-color: rgb(12, 12, 12);
+      background-color: white;
+      color: black;
+      border-radius: 25px;
+      max-width: 500px;
+      max box-shadow: -1px 1px 5px rgba(66, 66, 66, .75);
+      text-shadow: 3px -26px 12px rgba(66, 66, 66, .0);
+  }
+  /* step 4 finish styles*/
+  
+  .finish-container {
+      background-color: #f5f5f5;
+      margin: 0 auto;
+      width: 960px;
+      height: 500px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .finish-your-purchase {
+      box-sizing: border-box;
+      display: flex;
+      background-color: white;
+      width: 400px;
+      height: 480px;
+      margin-top: 10px;
+      /* margin-left: 30px; */
+      box-shadow: 0 0 10px 5px rgba(32, 32, 32, 0.151);
+  }
+  
+  .finish-your-order {
+      display: flex;
+      background-color: white;
+      width: 100px;
+      height: 50px;
+      /* margin-right: 30px; */
+      margin-top: 10px;
+      box-shadow: 0 0 10px 5px rgba(32, 32, 32, 0.151);
+  }
