@@ -1,315 +1,380 @@
-/* Importing Google Fonts*/
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
-/* Defaults */
-
-progress[value] {
-  appearance: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-}
-
-/* Header Styles */
-
-.header {
-  color: white;
-  background-color: black;
-  padding: 1.5rem;
-}
-
-.logo {
-  font-family: "Pacifico", sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* Main Styles */
-
-main {
-  margin-bottom: 6rem;
-}
-
-/* Product Styles */
-
-.product {
-  margin: 0 auto;
-  width: 960px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.product__thumbnails {
-  width: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.product__thumbnail-list {
-  list-style: none;
-}
-
-.product__thumbnail {
-  width: 100%;
-  cursor: pointer;
-}
-
-.product__view {
-  width: 55%;
-  padding: 0 2rem;
-}
-
-.product__view-img {
-  width: 100%;
-}
-
-.product__info {
-  padding: 1rem;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.product__title {
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.product__price {
-  font-size: 2.5rem;
-}
-
-.product__property {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.product__value {
-  margin-bottom: 1rem;
-}
-
-.product__select {
-  outline: none;
-  padding: 0.5rem;
-  width: 4rem;
-}
-
-.product__color-list {
-  list-style: none;
-}
-
-.product__color-list > li {
-  display: inline-block;
-}
-
-.product__color-timg {
-  width: 2rem;
-  margin-right: 0.25rem;
-  cursor: pointer;
-}
-
-.product__btn {
-  border: none;
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-  background-color: black;
-  color: white;
-  font-family: "Open Sans";
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.1s ease-in;
-}
-
-.product__btn:hover {
-  background-color: #4d4d4d;
-}
-
-/* Footer Styles */
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
-
-.footer-text {
-  font-size: 0.8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.2ch;
-}
-
-/* Form Styles */
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="number"],
-select {
-  display: block;
-  padding: 0.4rem;
-  margin: 0.5rem 0;
-}
-
-label {
-  font-weight: 600;
-}
-
-.address__form {
-  width: 12rem;
-}
-
-/* Submit Buttons */
-
-.submitButtons__wrap {
-  width: 8rem;
-  display: flex;
-  justify-content: space-around;
-}
-.submit__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 960px;
-  margin: 0 auto;
-  background-color: lightgray;
-}
-.cleanButton {
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-
-.nextButton {
-  border-radius: 5px;
-  background-color: black;
-  color: white;
-}
-
-.cleanButton .
-/* Progress Styles */
-
-.checkout-progress {
-  margin: 0 auto;
-  width: 960px;
-  position: relative;
-}
-
-.checkout-progress__bar {
-  height: 0.8rem;
-  width: 900px;
-  margin: 0 auto;
-
-  position: absolute;
-  top: 2.6rem;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.checkout-progress__bar::-webkit-progress-value {
-  background-color: #d3d3d3;
-  box-shadow: inset 0 0 2px rgb(0, 0, 0);
-}
-
-.checkout-progress__bar::-webkit-progress-bar {
-  background-color: white;
-  box-shadow: inset 0 0 2px rgb(0, 0, 0);
-}
-
-.checkout-progress__stages {
-  display: flex;
-  justify-content: space-between;
-}
-
-.checkout-progress__stage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stage-name {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.stage-signal {
-  margin: 1rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100%;
-  border: 1px solid grey;
-  background-color: white;
-}
-
-/* States */
-
-.is-selected {
-  border: 1px solid grey;
-}
-
-.is-hidden {
-  display: none;
-}
-
-/* step 3 Gift*/
-.message {
-  width: 0;
-}
-
-/* step 4 finish styles*/
-
-.finish-container {
-  background-color: #f5f5f5;
-  margin: 0 auto;
-  width: 960px;
-  height: 500px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.finish-your-purchase {
-  display: flex;
-  background-color: white;
-  width: 400px;
-  height: 30px;
-}
-
-.finish-your-order {
-  display: flex;
-  background-color: white;
-  width: 100px;
-  height: 50px;
-}
+  /* Importing Google Fonts*/
+  
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+  /* Defaults */
+  
+  progress[value] {
+      appearance: none;
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  ul {
+      padding: 0;
+      margin: 0;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+  }
+  /* States */
+  
+  .is-selected {
+      border: 1px solid grey;
+  }
+  
+  .is-hidden {
+      display: none;
+  }
+  /* Header Styles */
+  
+  .header {
+      color: white;
+      background-color: black;
+      padding: 1.5rem;
+  }
+  
+  .logo {
+      font-family: "Pacifico", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+  }
+  /* Main Styles */
+  
+  main {
+      margin-bottom: 6rem;
+  }
+  /* Product Styles */
+  
+  .product {
+      margin: 0 auto;
+      width: 960px;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .product__thumbnails {
+      width: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .product__thumbnail-list {
+      list-style: none;
+  }
+  
+  .product__thumbnail {
+      width: 100%;
+      cursor: pointer;
+  }
+  
+  .product__view {
+      width: 55%;
+      padding: 0 2rem;
+  }
+  
+  .product__view-img {
+      width: 100%;
+  }
+  
+  .product__info {
+      padding: 1rem;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .product__title {
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+  }
+  
+  .product__price {
+      font-size: 2.5rem;
+  }
+  
+  .product__property {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+  }
+  
+  .product__value {
+      margin-bottom: 1rem;
+  }
+  
+  .product__select {
+      outline: none;
+      padding: 0.5rem;
+      width: 4rem;
+  }
+  
+  .product__color-list {
+      list-style: none;
+  }
+  
+  .product__color-list>li {
+      display: inline-block;
+  }
+  
+  .product__color-timg {
+      width: 2rem;
+      margin-right: 0.25rem;
+      cursor: pointer;
+  }
+  
+  .product__btn {
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      text-align: center;
+      background-color: black;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.1s ease-in;
+  }
+  
+  .product__btn:hover {
+      background-color: #4d4d4d;
+  }
+  /* Footer Styles */
+  
+  .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      background-color: black;
+      padding: 1rem;
+  }
+  
+  .footer-text {
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.2ch;
+  }
+  /* Form Styles */
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  select {
+      display: block;
+      padding: 0.4rem;
+      margin: 0.5rem 0;
+      width: 12rem;
+  }
+  
+  label {
+      display: block;
+      font-weight: 600;
+  }
+  
+  .wizard {
+      margin: 0 auto;
+      width: 960px;
+      box-shadow: 0 0 4px grey;
+  }
+  
+  .wizard__form {
+      padding: 1rem 3rem;
+  }
+  
+  .wizard__form-title {
+      margin: 0 0 2rem;
+  }
+  /* Submit Buttons */
+  
+  .wizard__controls {
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+  .wizard-btn {
+      padding: 0.8rem;
+      margin: 0.8rem;
+      border-radius: 5px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      border: 1px solid black;
+  }
+  
+  .clear-btn {
+      background-color: white;
+      color: black;
+  }
+  
+  .next-btn {
+      background-color: black;
+      color: white;
+  }
+  /* Progress Bar Styles */
+  
+  .wizard__progress {
+      margin: 0 auto;
+      padding: 1rem;
+      width: 80%;
+      position: relative;
+  }
+  
+  .wizard__progress-bar {
+      height: 0.6rem;
+      width: 92%;
+      margin: 0 auto;
+      position: absolute;
+      top: 3.4rem;
+      left: 0;
+      right: 0;
+      z-index: -1;
+  }
+  
+  .wizard__progress-bar::-webkit-progress-value {
+      background-color: #d3d3d3;
+      box-shadow: inset 0 0 2px rgb(0, 0, 0);
+  }
+  
+  .wizard__progress-bar::-webkit-progress-bar {
+      background-color: white;
+      box-shadow: inset 0 0 2px rgb(0, 0, 0);
+  }
+  
+  .wizard__progress-stages {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .wizard__progress-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .stage-name {
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+  }
+  
+  .stage-signal {
+      margin: 0.8rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 100%;
+      border: 4px solid grey;
+      background-color: white;
+  }
+  /* step 4 finish styles*/
+  
+  .finish-container {
+      background-color: #f5f5f5;
+      margin: 0 auto;
+      max-width: 960px;
+      max-height: 500px;
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .finish-your-purchase {
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      display: flex;
+      background-color: white;
+      width: 400px;
+      height: 480px;
+      box-shadow: 0 0 10px 5px rgba(32, 32, 32, 0.151);
+      margin-top: 10px;
+  }
+  
+  .finish-your-purchase-text {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 10%;
+      background-color: yellow;
+      font-weight: bold;
+      font-size: 120%;
+  }
+  
+  .finish-your-purchase-img-description {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-items: center;
+      width: 100%;
+      height: 40%;
+  }
+  
+  .purchase-image {
+      display: flex;
+      background-color: red;
+      width: 50%;
+  }
+  
+  .purchase-description {
+      display: flex;
+      background-color: aqua;
+      width: 50%;
+  }
+  
+  .finish-your-purchase-terms-buyBtn {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-items: center;
+      width: 100%;
+      height: 50%;
+  }
+  
+  .finish-terms-and-conditions {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 10%;
+      background-color: rgb(255, 0, 140);
+      font-weight: bold;
+      font-size: 120%;
+  }
+  
+  .finish-buyBtn {
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      text-align: center;
+      background-color: black;
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.1s ease-in;
+  }
+  
+  .finish-your-order {
+      display: flex;
+      background-color: white;
+      width: 200px;
+      height: 120px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px 5px rgba(32, 32, 32, 0.151);
+  }
