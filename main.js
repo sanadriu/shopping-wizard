@@ -21,6 +21,8 @@ nxtBtn.addEventListener("click", nextButtonSubmit);
 
 function nextButtonSubmit() {
     
+  
+  
   profileForm.classList.toggle("is-hidden");
   addressForm.classList.toggle("is-hidden");
 }
