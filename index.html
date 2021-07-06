@@ -144,32 +144,34 @@
 
         <!----------------------------------------------step 3 Shipping------------------------------------------>
         <div class="shipping">
-            <h1>Shipping</h1>
-            <h3>Shipping type (72H)</h3>
-            <form class="shipping">
-                <label for="shipping_free"><input type="radio" id="type" name="shipping" value="free" /> Free shipment (72H)</label>
-                <label for="shipping_extra"><input type="radio" id="type" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
-                <label for="shipping_premium"><input type="radio" id="type" name="shipping" value="premium" /> Premium (24h)<strong>9,99€</strong></label>
-            </form>
-            <div>
-                <input type="checkbox" name="gift" value="gift">
-                <label for="gift">Is it a gift?</label>
-            </div>
-            <div class="arrive">
-                <h5>Your order will arrive:</h5>
-                <p>ESTIMATE DELIVERY DATE:</p>
-                <p>aqui va el js de date + horas</p>
-            </div>
-            <div class="giftMessage">
-                <p>Gift Message</p>
-                <textarea rows="4" cols="30" name="comment" form="usrform"> </textarea>
-                <h5>Gift wrapper image</h5>
-                <input type="file" id="myfile" name="myfile">
-                </input>
-            </div>
-            <div class="wizard__controls">
-                <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
-                <input type="submit" value="Next" class="wizard-btn next-btn" />
+            <div clas="content-shipping">
+                <form class="shippingMode">
+                    <h1 class="wizard__form-title">Shipping</h1>
+                    <h3>Shipping type </h3>
+                    <label for="shipping_free"><input type="radio" id="type" name="shipping" value="free" /> Free shipment (72H)</label>
+                    <label for="shipping_extra"><input type="radio" id="type" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
+                    <label for="shipping_premium"><input type="radio" id="type" name="shipping" value="premium" /> Premium (24h)<strong>9,99€</strong></label>
+                </form>
+                <div>
+                    <input type="checkbox" name="gift" value="gift">
+                    <label for="gift">Is it a gift?</label>
+                </div>
+                <div class="arrive">
+                    <h5>Your order will arrive:</h5>
+                    <p>ESTIMATE DELIVERY DATE:</p>
+                    <p>aqui va el js de date + horas</p>
+                </div>
+                <div class="giftMessage">
+                    <p>Gift Message</p>
+                    <textarea rows="4" cols="30" name="comment" form="usrform"> </textarea>
+                    <h5>Gift wrapper image</h5>
+                    <input type="file" id="myfile" name="myfile">
+                    </input>
+                </div>
+                <div class="wizard__controls">
+                    <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                    <input type="submit" value="Next" class="wizard-btn next-btn" />
+                </div>
             </div>
         </div>
         <!----------------------------------------Step 4 Finish---------------------------------------------->
