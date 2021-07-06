@@ -87,8 +87,8 @@
                 </div>
                 <progress class="wizard__progress-bar" value="2" min="0" max="3"></progress>
             </section>
-            <section class="wizard__form">
-                <form action="" class="is-selected" id="profile-form">
+            <section>
+                <form action="" id="profile-form" class="wizard__form">
                     <h1 class="wizard__form-title">Profile</h1>
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" />
@@ -103,7 +103,7 @@
                         <input type="button" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
-                <form action="" class="is-hidden" id="address-form">
+                <form action="" id="address-form" class="wizard__form">
                     <h1 class="wizard__form-title">Address</h1>
                     <label for="firstName">First name</label>
                     <input type="text" id="firstName" name="firstname" />
@@ -140,71 +140,62 @@
                         <input type="submit" value="Next" class="wizard-btn next-btn" />
                     </div>
                 </form>
+                <form action="" id="shipping-form" class="wizard__form">
+                    <h1>Shipping</h1>
+                    <fieldset>
+                        <legend>Shipping type (72H)</legend> 
+                        <label for="shipping_free"><input type="radio" id="type" name="shipping" value="free" /> Free shipment (72H)</label>
+                        <label for="shipping_extra"><input type="radio" id="type" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
+                        <label for="shipping_premium"><input type="radio" id="type" name="shipping" value="premium" /> Premium (24h) <strong>9,99€</strong></label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Your order will arrive:</legend> 
+                        <p class="small">ESTIMATE DELIVERY DATE:</p>
+                        <p class="small">Between <strong>[[Date-01]]</strong> and <strong>[[Date-02]]</strong>.</p>
+                    </fieldset>
+                    <label for="gift"><input type="checkbox" name="gift" value="gift">Is it a gift?</label>
+                    <fieldset>
+                        <label for="gift-message">Gift Message</label>
+                        <textarea id="gift-message" name="gift-message" rows="6" cols="30" ></textarea>
+                        <label for="gift-wrapper">Gift wrapper image</label>
+                        <input type="file" id="gift-wrapper" name="gift-wrapper">
+                        </input>
+                    </fieldset>
+                    <div class="wizard__controls">
+                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                        <input type="submit" value="Next" class="wizard-btn next-btn" />
+                    </div>
+                </form>
+                <div class="finish-container" class="wizard__form">
+                    <div class="finish-your-purchase">
+                        <h1 class="finish-your-purchase__title">Your purchase</h1>
+                        <div class="finish-your-purchase__product">
+                            <img class="finish-your-purchase__product-image" alt="purchased-product">
+                            <div class="finish-your-purchase__product-description">
+                                <h2 class="finish-your-purchase__product-title">[[Title of the purchase]]</h2>
+                                <span class="finish-your-purchase__product-property">Size: [[size]]</span>
+                                <span class="finish-your-purchase__product-property">Color: [[color]]</span>
+                                <span class="tiny">ESTIMATE DELIVERY DATE:</span>
+                                <p class="finish-your-purchase__product-arrival">Between <strong>[[Date-01]]</strong> and <strong>[[Date-02]]</strong>.</p>
+                            </div>
+                        </div>
+                        <form action="" id="finish-form">
+                            <div class="finish-terms-and-conditions">
+                                <label>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">I have read and i accept the terms and conditions.<br>
+                                </label>
+                            </div>
+                            <button class="finish-buyBtn">Buy now</button>
+                        </form>
+                    </div>
+                    <div class="finish-your-order">
+                        <div class="finish-your-order-title"> Your order</div>
+                        <div class="finish-your-order-prices"> </div>
+                        <div class="order-total"></div>
+                    </div>
+                </div>
             </section>
         </div>
-
-        <!----------------------------------------------step 3 Shipping------------------------------------------>
-        <div class="shipping">
-            <h1>Shipping</h1>
-            <h3>Shipping type (72H)</h3>
-            <form class="shipping">
-                <label for="shipping_free"><input type="radio" id="type" name="shipping" value="free" /> Free shipment (72H)</label>
-                <label for="shipping_extra"><input type="radio" id="type" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
-                <label for="shipping_premium"><input type="radio" id="type" name="shipping" value="premium" /> Premium (24h)<strong>9,99€</strong></label>
-            </form>
-            <div>
-                <input type="checkbox" name="gift" value="gift">
-                <label for="gift">Is it a gift?</label>
-            </div>
-            <div class="arrive">
-                <h5>Your order will arrive:</h5>
-                <p>ESTIMATE DELIVERY DATE:</p>
-                <p>aqui va el js de date + horas</p>
-            </div>
-            <div class="giftMessage">
-                <p>Gift Message</p>
-                <textarea rows="4" cols="30" name="comment" form="usrform"> </textarea>
-                <h5>Gift wrapper image</h5>
-                <input type="file" id="myfile" name="myfile">
-                </input>
-            </div>
-            <div class="wizard__controls">
-                <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
-                <input type="submit" value="Next" class="wizard-btn next-btn" />
-            </div>
-        </div>
-        <!----------------------------------------Step 4 Finish---------------------------------------------->
-        <div class="finish-container">
-            <div class="finish-your-purchase">
-                <div class="finish-your-purchase-text"> Your purchase</div>
-                <div class="finish-your-purchase-img-description">
-                    <div class="purchase-image"> *IMAGE OF THE PURCHASE*</div>
-                    <div class="purchase-description"> 
-                        <div class="purchase-title">*Title of The purchase*</div>
-                        <div class="purchase-description-size-color"> Size: ** <br> Color: </div>
-                        <div class="purchase-estimate-delivery-day"> ESTIMATED DELIVERY DAY:
-                             <br> Between <b>*estimated day*hour*</b> <br> and <b>*estimated day* *hour*</b></div>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="finish-your-purchase-terms-buyBtn">
-                    <div class="finish-terms-and-conditions">
-                        <label>
-                            <input type="checkbox" id="cbox1" value="first_checkbox">I have read and i accept the terms and conditions.<br>
-                        </label>
-                    </div>
-                   <div class="finish-buyBtn-container">
-                       <button class="finish-buyBtn">Buy now</button>
-                    </div> 
-                </div>
-            </div>
-            <div class="finish-your-order">
-                <div class="finish-your-order-title"> Your order</div>
-                <div class="finish-your-order-prices"> </div>
-                <div class="order-total"></div>
-            </div>
-        </div>
-
     </main>
     <footer class="footer">
         <h2 class="footer-text">Just a website developed without &#9829;</h2>
