@@ -88,7 +88,7 @@
                 <progress class="wizard__progress-bar" value="2" min="0" max="3"></progress>
             </section>
             <section class="wizard__form">
-                <form action="">
+                <form action="" class="is-selected" id="profile-form">
                     <h1 class="wizard__form-title">Profile</h1>
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" />
@@ -100,10 +100,10 @@
                     <input type="password" id="password_confirmation" name="password" />
                     <div class="wizard__controls">
                         <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
-                        <input type="submit" value="Next" class="wizard-btn next-btn" />
+                        <input type="button" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
-                <form action="" class="is-hidden">
+                <form action="" class="is-hidden" id="address-form">
                     <h1 class="wizard__form-title">Address</h1>
                     <label for="firstName">First name</label>
                     <input type="text" id="firstName" name="firstname" />
@@ -133,7 +133,8 @@
                         <option value="Germany">(+49) Germany</option>
                         <option value="Greece">(+30) Greece</option>
                     </select>
-                    <label for="checkboxAddress"><input type="tel" id="phonenumber" name="phonenumber" maxlength="9" /><input type="checkbox" id="checkboxAddress" value="checkbox_address"/>This is my regular address</label>
+                    <input type="tel" id="phonenumber" name="phonenumber" maxlength="9" />
+                    <label for="checkboxAddress"><input type="checkbox" id="checkboxAddress" value="checkbox_address"/>This is my regular address</label>
                     <div class="wizard__controls">
                         <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
                         <input type="submit" value="Next" class="wizard-btn next-btn" />
@@ -197,6 +198,8 @@
     <footer class="footer">
         <h2 class="footer-text">Just a website developed without &#9829;</h2>
     </footer>
+
+    <script type="text/javascript" src="./main.js"></script>
 </body>
 
 </html>
