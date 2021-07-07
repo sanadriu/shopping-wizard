@@ -179,7 +179,17 @@ select {
   display: block;
   padding: 0.4rem;
   margin: 0.5rem 0 1rem;
-  width: 12rem;
+  width: 15rem;
+}
+
+select[name="phone_prefix"] {
+  display: inline-block;
+  width: 6rem;
+}
+
+input[name="phone"] {
+  display: inline-block;
+  width: 8.7rem;
 }
 
 textarea {
@@ -407,6 +417,18 @@ label {
   border: 1px solid grey;
 }
 
+/*
 .is-hidden {
   display: none;
+}
+*/
+
+/* Error Styles */
+
+.error-message {
+  width: 15rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: red;
+  background-color: #f9dddd;
 }
