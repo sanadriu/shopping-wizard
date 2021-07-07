@@ -188,7 +188,13 @@ select {
 .input-warning{
   height: 1,5rem;
   width: 12rem;
+  background-color: lightgray;
+  color: red;
+  font-size: 0.8rem;
+
 }
+
+
 
 label {
   display: block;
