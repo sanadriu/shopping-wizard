@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="js/product_page_interaction.js" type="module" defer></script>
 </head>
 
 <body>
@@ -14,27 +15,26 @@
         <h1 class="logo">Buy This Cap :D</h1>
     </header>
     <main>
-        <!-- Product -->
         <article class="product">
-            <div class="product__thumbnails">
-                <ul class="product__thumbnail-list">
+            <div class="product__view-thumbnails">
+                <ul class="product__view-thumbnail-list">
                     <li>
-                        <img class="product__thumbnail" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, 1st view" />
+                        <img class="product__view-thumbnail is-selected" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, 1st view" />
                     </li>
                     <li>
-                        <img class="product__thumbnail" src="assets/images/product/black/cap-black-view2.webp" alt="Cap with adjustable closure, 2nd view" />
+                        <img class="product__view-thumbnail" src="assets/images/product/black/cap-black-view2.webp" alt="Cap with adjustable closure, 2nd view" />
                     </li>
                 </ul>
             </div>
-            <div class="product__view">
-                <img class="product__view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View" />
+            <div class="product__primary-view">
+                <img class="product__primary-view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View" />
             </div>
             <div class="product__info">
                 <h2 class="product__title">Cap with adjustable closure</h2>
                 <span class="product__property">Price</span>
                 <span class="product__value product__price">30€</span>
                 <span class="product__property">Size</span>
-                <select class="product__value product__select" name="size">
+                <select class="product__value product__size-select" name="size">
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M" selected>M</option>
@@ -42,30 +42,30 @@
                     <option value="XL">XL</option>
                 </select>
                 <span class="product__property">Color</span>
-                <ul class="product__value product__color-list">
+                <ul class="product__value product__color-thumbnail-list">
                     <li>
-                        <img class="product__color-timg" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, black" />
+                        <img class="product__color-thumbnail is-selected" data-color="black" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, black" />
                     </li>
                     <li>
-                        <img class="product__color-timg" src="assets/images/product/brown/cap-brown-view1.webp" alt="Cap with adjustable closure, brown" />
+                        <img class="product__color-thumbnail" data-color="brown" src="assets/images/product/brown/cap-brown-view1.webp" alt="Cap with adjustable closure, brown" />
                     </li>
                     <li>
-                        <img class="product__color-timg" src="assets/images/product/navy/cap-navy-view1.webp" alt="Cap with adjustable closure, navy" />
+                        <img class="product__color-thumbnail" data-color="navy" src="assets/images/product/navy/cap-navy-view1.webp" alt="Cap with adjustable closure, navy" />
                     </li>
                     <li>
-                        <img class="product__color-timg" src="assets/images/product/olive/cap-olive-view1.webp" alt="Cap with adjustable closure, olive" />
+                        <img class="product__color-thumbnail" data-color="olive" src="assets/images/product/olive/cap-olive-view1.webp" alt="Cap with adjustable closure, olive" />
                     </li>
                     <li>
-                        <img class="product__color-timg" src="assets/images/product/red/cap-red-view1.webp" alt="Cap with adjustable closure, red" />
+                        <img class="product__color-thumbnail" data-color="red" src="assets/images/product/red/cap-red-view1.webp" alt="Cap with adjustable closure, red" />
                     </li>
                     <li>
-                        <img class="product__color-timg" src="assets/images/product/yellow/cap-yellow-view1.webp" alt="Cap with adjustable closure, yellow" />
+                        <img class="product__color-thumbnail" data-color="yellow" src="assets/images/product/yellow/cap-yellow-view1.webp" alt="Cap with adjustable closure, yellow" />
                     </li>
                 </ul>
-                <button class="product__btn">Buy</button>
+                <button class="product__BuyBtn">Buy</button>
             </div>
         </article>
-        <div class="wizard">
+        <div class="wizard is-hidden">
             <section class="wizard__progress">
                 <div class="wizard__progress-stages">
                     <div class="wizard__progress-stage">
@@ -144,9 +144,9 @@
                     <h1>Shipping</h1>
                     <fieldset>
                         <legend>Shipping type (72H)</legend> 
-                        <label for="shipping_free"><input type="radio" id="type" name="shipping" value="free" /> Free shipment (72H)</label>
-                        <label for="shipping_extra"><input type="radio" id="type" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
-                        <label for="shipping_premium"><input type="radio" id="type" name="shipping" value="premium" /> Premium (24h) <strong>9,99€</strong></label>
+                        <label for="shipping_free"><input type="radio" id="shipping_free" name="shipping" value="free" /> Free shipment (72H)</label>
+                        <label for="shipping_extra"><input type="radio" id="shipping_extra" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
+                        <label for="shipping_premium"><input type="radio" id="shipping_premium" name="shipping" value="premium" /> Premium (24h) <strong>9,99€</strong></label>
                     </fieldset>
                     <fieldset>
                         <legend>Your order will arrive:</legend> 
