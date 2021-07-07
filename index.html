@@ -103,7 +103,7 @@
                         <input type="button" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
-                <form action="" id="address-form" class="wizard__form">
+                <form action="" id="address-form" class="wizard__form is-hidden">
                     <h1 class="wizard__form-title">Address</h1>
                     <label for="firstName">First name</label>
                     <input type="text" id="firstName" name="firstname" />
@@ -140,7 +140,7 @@
                         <input type="submit" value="Next" class="wizard-btn next-btn" />
                     </div>
                 </form>
-                <form action="" id="shipping-form" class="wizard__form">
+                <form action="" id="shipping-form" class="wizard__form is-hidden">
                     <h1>Shipping</h1>
                     <fieldset>
                         <legend>Shipping type (72H)</legend> 
@@ -166,7 +166,7 @@
                         <input type="submit" value="Next" class="wizard-btn next-btn" />
                     </div>
                 </form>
-                <div class="finish-container" class="wizard__form">
+                <div class="finish-container wizard__form is-hidden">
                     <div class="finish-your-purchase">
                         <h1 class="finish-your-purchase__title">Your purchase</h1>
                         <div class="finish-your-purchase__product">
@@ -189,10 +189,10 @@
                         </form>
                     </div>
                     <div class="finish-your-order">
-                       <h3>Payment details <hr></h3>
-                       <span>Cap: <b>[[Cap price €]]</b> <hr></span>
-                       <span>[[Type of shipping]]: <b>[[price]]</b><hr> </span>
-                       <span>Total:</span>
+                        <h3>Payment details <hr></h3>
+                        <span>Cap: <b>[[Cap price €]]</b> <hr></span>
+                        <span>[[Type of shipping]]: <b>[[price]]</b><hr> </span>
+                        <span>Total:</span>
                     </div>
                 </div>
             </section>

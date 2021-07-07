@@ -24,16 +24,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* States */
-
-.is-selected {
-  border: 1px solid grey;
-}
-
-.is-hidden {
-  display: none;
-}
-
 /* Header Styles */
 
 .header {
@@ -54,8 +44,7 @@ body {
 /* Main Styles */
 
 main {
-  margin-bottom: 6rem;
-  position: relative;
+  padding-bottom: 5rem;
 }
 
 /* Product Styles */
@@ -221,10 +210,6 @@ label {
   width: 960px;
   box-shadow: 0 0 4px grey;
   background-color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
 }
 
 .wizard__progress {
@@ -416,4 +401,12 @@ label {
   font-size: 90%;
 }
 
+/* States */
 
+.is-selected {
+  border: 1px solid grey;
+}
+
+.is-hidden {
+  display: none;
+}

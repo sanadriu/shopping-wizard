@@ -66,6 +66,7 @@ $product.addEventListener("click", (event) => {
   }
 
   if ($element.matches(".product__BuyBtn")) {
+    $product.classList.add("is-hidden");
     $wizard.classList.remove("is-hidden");
   }
 });
