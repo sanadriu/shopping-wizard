@@ -1,6 +1,9 @@
-const product = {
-  currentColor: null,
-  currentSize: null,
+const order = {
+  product: {
+    color: null,
+    size: null,
+    price: null,
+  },
 };
 
 /* Main DOM Elements */
@@ -15,9 +18,9 @@ const $productViewImg = $product.querySelector(".product__primary-view-img");
 
 function setDefaults() {
   $productViewImg.setAttribute("src", $product.querySelector(".product__view-thumbnail.is-selected").getAttribute("src"));
-  product.currentColor = $product.querySelector(".product__color-thumbnail.is-selected").dataset.color;
-  product.currentSize = $product.querySelector(".product__size-select").value;
-  console.log(product);
+  order.product.color = $product.querySelector(".product__color-thumbnail.is-selected").dataset.color;
+  order.product.size = $product.querySelector(".product__size-select").value;
+  order.product.price = 30;
 }
 
 function selectColor($element) {
@@ -27,12 +30,12 @@ function selectColor($element) {
   $element.classList.add("is-selected");
 
   $productViewThumbnailList.forEach(($productViewThumbnail) => {
-    $productViewThumbnail.setAttribute("src", $productViewThumbnail.getAttribute("src").replaceAll(product.currentColor, color));
+    $productViewThumbnail.setAttribute("src", $productViewThumbnail.getAttribute("src").replaceAll(order.product.color, color));
   });
 
-  $productViewImg.setAttribute("src", $productViewImg.getAttribute("src").replaceAll(product.currentColor, color));
+  $productViewImg.setAttribute("src", $productViewImg.getAttribute("src").replaceAll(order.product.color, color));
 
-  product.currentColor = color;
+  order.product.color = color;
 }
 
 function selectView($element) {
@@ -43,7 +46,7 @@ function selectView($element) {
 }
 
 function selectSize($element) {
-  product.currentSize = $element.value;
+  order.product.size = $element.value;
 }
 
 /* DOM Events */
@@ -68,6 +71,7 @@ $product.addEventListener("click", (event) => {
   if ($element.matches(".product__BuyBtn")) {
     $product.classList.add("is-hidden");
     $wizard.classList.remove("is-hidden");
+    console.log(order);
   }
 });
 

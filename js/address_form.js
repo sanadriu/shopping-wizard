@@ -5,7 +5,7 @@ const $shippingForm = document.querySelector("#shipping-form");
 const $progressBar = document.querySelector(".wizard__progress-bar");
 const $stage = document.querySelector("[data-stage='2']");
 
-/* Regular Expressions */
+/* --- Regular Expressions --- */
 
 const regExpressions = {
   name: /^([A-ZÀ-ŸÑ][-,a-za-ÿñ.']+\s*)+$/,
