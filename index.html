@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Product</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <script src="js/product_page_interaction.js" type="module" defer></script>
+    <script src="js/address_form.js" type="module" defer></script>
 </head>
 
 <body>
@@ -19,15 +20,15 @@
             <div class="product__view-thumbnails">
                 <ul class="product__view-thumbnail-list">
                     <li>
-                        <img class="product__view-thumbnail is-selected" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, 1st view" />
+                        <img class="product__view-thumbnail is-selected" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, 1st view"/>
                     </li>
                     <li>
-                        <img class="product__view-thumbnail" src="assets/images/product/black/cap-black-view2.webp" alt="Cap with adjustable closure, 2nd view" />
+                        <img class="product__view-thumbnail" src="assets/images/product/black/cap-black-view2.webp" alt="Cap with adjustable closure, 2nd view"/>
                     </li>
                 </ul>
             </div>
             <div class="product__primary-view">
-                <img class="product__primary-view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View" />
+                <img class="product__primary-view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View"/>
             </div>
             <div class="product__info">
                 <h2 class="product__title">Cap with adjustable closure</h2>
@@ -44,22 +45,22 @@
                 <span class="product__property">Color</span>
                 <ul class="product__value product__color-thumbnail-list">
                     <li>
-                        <img class="product__color-thumbnail is-selected" data-color="black" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, black" />
+                        <img class="product__color-thumbnail is-selected" data-color="black" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, black"/>
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="brown" src="assets/images/product/brown/cap-brown-view1.webp" alt="Cap with adjustable closure, brown" />
+                        <img class="product__color-thumbnail" data-color="brown" src="assets/images/product/brown/cap-brown-view1.webp" alt="Cap with adjustable closure, brown"/>
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="navy" src="assets/images/product/navy/cap-navy-view1.webp" alt="Cap with adjustable closure, navy" />
+                        <img class="product__color-thumbnail" data-color="navy" src="assets/images/product/navy/cap-navy-view1.webp" alt="Cap with adjustable closure, navy"/>
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="olive" src="assets/images/product/olive/cap-olive-view1.webp" alt="Cap with adjustable closure, olive" />
+                        <img class="product__color-thumbnail" data-color="olive" src="assets/images/product/olive/cap-olive-view1.webp" alt="Cap with adjustable closure, olive"/>
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="red" src="assets/images/product/red/cap-red-view1.webp" alt="Cap with adjustable closure, red" />
+                        <img class="product__color-thumbnail" data-color="red" src="assets/images/product/red/cap-red-view1.webp" alt="Cap with adjustable closure, red"/>
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="yellow" src="assets/images/product/yellow/cap-yellow-view1.webp" alt="Cap with adjustable closure, yellow" />
+                        <img class="product__color-thumbnail" data-color="yellow" src="assets/images/product/yellow/cap-yellow-view1.webp" alt="Cap with adjustable closure, yellow"/>
                     </li>
                 </ul>
                 <button class="product__BuyBtn">Buy</button>
@@ -103,54 +104,54 @@
                     <input type="password" id="password_confirmation" name="password" minlength="8" maxlength="20" />
                     <div id="confpass-warning"></div>
                     <div class="wizard__controls">
-                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn"/>
                         <input type="submit" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
                 <form action="" id="address-form" class="wizard__form is-hidden">
                     <h1 class="wizard__form-title">Address</h1>
-                    <label for="firstName">First name</label>
-                    <input type="text" id="firstName" name="firstname" />
-                    <label for="lastName">Last name</label>
-                    <input type="text" id="lastName" name="lastname" />
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" maxlength="20"/>
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" maxlength="20"/>
                     <label for="birthdate">Birth Date</label>
-                    <input type="date" id="birthdate" name="birthdate" />
+                    <input type="date" id="birthdate" name="birthdate"/>
                     <label for="address_1">Address 1</label>
-                    <input type="text" id="address_1" name="address_1" />
+                    <input type="text" id="address_1" name="address_1" maxlength="50"/>
                     <label for="address_2">Address 2</label>
-                    <input type="text" id="address_2" name="address_2" />
+                    <input type="text" id="address_2" name="address_2" maxlength="50"/>
                     <label for="zipcode">Postal code</label>
-                    <input type="number" id="zipcode" name="zipcode" minlength="5" maxlength="5" />
+                    <input type="number" id="zipcode" name="zipcode" min="0" max="99999"/>
                     <label for="country">Country</label>
-                    <select class="country" name="country">
+                    <select name="country">
                         <option value="Andorra">Andorra</option>
                         <option value="Spain">Spain</option>
                         <option value="France">France</option>
                         <option value="Germany">Germany</option>
                         <option value="Greece">Greece</option>
                     </select>
-                    <label for="phonenumber">Phone Number</label>
-                    <select class="prefix" name="prefix">
-                        <option value="Andorra">(+376) Andorra</option>
-                        <option value="Spain">(+34) Spain</option>
-                        <option value="France">(+33) France</option>
-                        <option value="Germany">(+49) Germany</option>
-                        <option value="Greece">(+30) Greece</option>
+                    <label for="phone">Phone Number</label>
+                    <select name="phone_prefix">
+                        <option value="Andorra">376 AND</option>
+                        <option value="Spain">34 ESP</option>
+                        <option value="France">33 FRA</option>
+                        <option value="Germany">49 DEU</option>
+                        <option value="Greece">30 GRC</option>
                     </select>
-                    <input type="tel" id="phonenumber" name="phonenumber" maxlength="9" />
-                    <label for="checkboxAddress"><input type="checkbox" id="checkboxAddress" value="checkbox_address"/>This is my regular address</label>
+                    <input type="tel" id="phone" name="phone" maxlength="9"/>
+                    <label for="is_regular_address"><input type="checkbox" name="is_regular_address" id="is_regular_address"/>This is my regular address</label>
                     <div class="wizard__controls">
-                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
-                        <input type="submit" value="Next" class="wizard-btn next-btn" />
+                        <input type="reset" name="clear" value="Clear" class="wizard-btn clear-btn"/>
+                        <input type="submit" name="next" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
                 <form action="" id="shipping-form" class="wizard__form is-hidden">
                     <h1>Shipping</h1>
                     <fieldset>
                         <legend>Shipping type (72H)</legend> 
-                        <label for="shipping_free"><input type="radio" id="shipping_free" name="shipping" value="free" /> Free shipment (72H)</label>
-                        <label for="shipping_extra"><input type="radio" id="shipping_extra" name="shipping" value="extra" /> Extra shipping (48h) <strong>4,99€</strong></label>
-                        <label for="shipping_premium"><input type="radio" id="shipping_premium" name="shipping" value="premium" /> Premium (24h) <strong>9,99€</strong></label>
+                        <label for="shipping_free"><input type="radio" id="shipping_free" name="shipping" value="free"/> Free shipment (72H)</label>
+                        <label for="shipping_extra"><input type="radio" id="shipping_extra" name="shipping" value="extra"/> Extra shipping (48h) <strong>4,99€</strong></label>
+                        <label for="shipping_premium"><input type="radio" id="shipping_premium" name="shipping" value="premium"/> Premium (24h) <strong>9,99€</strong></label>
                     </fieldset>
                     <fieldset>
                         <legend>Your order will arrive:</legend> 
@@ -166,8 +167,8 @@
                         </input>
                     </fieldset>
                     <div class="wizard__controls">
-                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
-                        <input type="submit" value="Next" class="wizard-btn next-btn" />
+                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn"/>
+                        <input type="submit" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
                 <div class="finish-container wizard__form is-hidden">
