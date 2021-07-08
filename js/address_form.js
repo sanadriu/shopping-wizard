@@ -1,9 +1,17 @@
-/* Elements */
+/* --- Elements --- */
 
 const $addressForm = document.querySelector("#address-form");
 const $shippingForm = document.querySelector("#shipping-form");
 const $progressBar = document.querySelector(".wizard__progress-bar");
 const $stage = document.querySelector("[data-stage='2']");
+
+/* Regular Expressions */
+
+const regExpressions = {
+  name: /^([A-ZÀ-ŸÑ][-,a-za-ÿñ.']+\s*)+$/,
+  date: /^\d{4}-\d{2}-\d{2}$/,
+  phone: /\d+$/,
+};
 
 /* --- Phone Prefix Changer --- */
 /* Selects automatically the phone prefix in function of the selected country. */
@@ -56,7 +64,7 @@ function AddressFormValidator($input) {
     case "firstname":
       showErrorMessage($input, (value) => {
         if (value.length === 0) return "Please enter the first name.";
-        if (!/^([A-ZÀ-ŸÑ][-,a-za-ÿñ.']+\s*)+$/.test(value))
+        if (!regExpressions.name.test(value))
           return `Please enter a valid first name.
           <br>· Names must start with uppercase.
           <br>· Names cannot contain numbers.
@@ -66,7 +74,7 @@ function AddressFormValidator($input) {
     case "lastname":
       showErrorMessage($input, (value) => {
         if (value.length === 0) return "Please enter the last name.";
-        if (!/^([A-ZÀ-ŸÑ][-,a-za-ÿñ.']+\s*)+$/.test(value))
+        if (!regExpressions.name.test(value))
           return `Please enter a valid last name.
           <br>· Names must start with uppercase.
           <br>· Names cannot contain numbers.
@@ -75,7 +83,7 @@ function AddressFormValidator($input) {
       break;
     case "birthdate":
       showErrorMessage($input, (value) => {
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return "Please enter a valid date.";
+        if (!regExpressions.date.test(value)) return "Please enter a valid date.";
         if (new Date(value) < new Date("1900-01-01")) return "The birth date cannot be older than 1900-01-01.";
         if (new Date(value) > new Date()) return "The birth date cannot be a future date.";
       });
@@ -94,7 +102,7 @@ function AddressFormValidator($input) {
     case "phone":
       showErrorMessage($input, (value) => {
         if (value.length === 0) return "Please enter the phone number.";
-        if (!/\d+$/.test(value)) return "Please enter a valid phone number. It must be numeric.";
+        if (!regExpressions.phone.test(value)) return "Please enter a valid phone number. It must be numeric.";
       });
       break;
   }
