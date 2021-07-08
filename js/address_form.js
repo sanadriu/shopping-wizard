@@ -28,9 +28,7 @@ function showErrorMessage($input, wrongCases) {
 
   const $previousError = $addressForm.querySelector(`[data-input='${name}']`);
 
-  if ($previousError !== null) {
-    $previousError.remove();
-  }
+  if ($previousError !== null) $previousError.remove();
 
   $input.classList.remove("input-warning-border");
 
@@ -88,6 +86,7 @@ function AddressFormValidator($input) {
     case "zipcode":
       showErrorMessage($input, (value) => {
         if (value.length === 0) return "Please enter the zipcode.";
+        if (value.length > 5) return "Zipcode length must be less than 5.";
       });
       break;
     case "phone":
