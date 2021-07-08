@@ -111,17 +111,17 @@
                 <form action="" id="address-form" class="wizard__form is-hidden">
                     <h1 class="wizard__form-title">Address</h1>
                     <label for="firstname">First name</label>
-                    <input type="text" id="firstname" name="firstname" required maxlength="20"/>
+                    <input type="text" id="firstname" name="firstname" maxlength="20"/>
                     <label for="lastname">Last name</label>
-                    <input type="text" id="lastname" name="lastname" required maxlength="20"/>
+                    <input type="text" id="lastname" name="lastname" maxlength="20"/>
                     <label for="birthdate">Birth Date</label>
-                    <input type="date" id="birthdate" name="birthdate" required/>
+                    <input type="date" id="birthdate" name="birthdate"/>
                     <label for="address_1">Address 1</label>
-                    <input type="text" id="address_1" name="address_1" required maxlength="50"/>
+                    <input type="text" id="address_1" name="address_1" maxlength="50"/>
                     <label for="address_2">Address 2</label>
                     <input type="text" id="address_2" name="address_2" maxlength="50"/>
                     <label for="zipcode">Postal code</label>
-                    <input type="number" id="zipcode" name="zipcode" minlength="5" maxlength="5"/>
+                    <input type="number" id="zipcode" name="zipcode" min="0" max="99999"/>
                     <label for="country">Country</label>
                     <select name="country">
                         <option value="Andorra">Andorra</option>
@@ -141,8 +141,8 @@
                     <input type="tel" id="phone" name="phone" maxlength="9"/>
                     <label for="is_regular_address"><input type="checkbox" name="is_regular_address" id="is_regular_address"/>This is my regular address</label>
                     <div class="wizard__controls">
-                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn"/>
-                        <input type="submit" value="Next" class="wizard-btn next-btn"/>
+                        <input type="reset" name="clear" value="Clear" class="wizard-btn clear-btn"/>
+                        <input type="submit" name="next" value="Next" class="wizard-btn next-btn"/>
                     </div>
                 </form>
                 <form action="" id="shipping-form" class="wizard__form is-hidden">
