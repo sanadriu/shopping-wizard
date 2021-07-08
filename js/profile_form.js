@@ -32,7 +32,7 @@ let nxtBtn = document.querySelector(".next-btn");
 
 let regExpLetterNumber = /^[A-Za-z0-9]+$/;
 let regExpEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-let regExpPassword = /^.{8,15}$/;
+let regExpPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
 // Function Validate Profile Form
 
