@@ -253,7 +253,7 @@ label {
 }
 
 .wizard__progress-bar::-webkit-progress-value {
-  background-color: #d3d3d3;
+  background-color: yellowgreen;
   box-shadow: inset 0 0 2px rgb(0, 0, 0);
 }
 
@@ -284,7 +284,7 @@ label {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 100%;
-  border: 4px solid grey;
+  border: 3px solid grey;
   background-color: white;
   z-index: 1;
 }
@@ -433,6 +433,10 @@ label {
 
 .is-hidden {
   display: none;
+}
+
+.stage-signal.is-completed {
+  background-color: yellowgreen;
 }
 
 /* Error Styles */

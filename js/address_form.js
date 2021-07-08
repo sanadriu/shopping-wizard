@@ -1,7 +1,9 @@
-/* Form Elements */
+/* Elements */
 
 const $addressForm = document.querySelector("#address-form");
 const $shippingForm = document.querySelector("#shipping-form");
+const $progressBar = document.querySelector(".wizard__progress-bar");
+const $stage = document.querySelector("[data-stage='2']");
 
 /* --- Phone Prefix Changer --- */
 /* Selects automatically the phone prefix in function of the selected country. */
@@ -111,12 +113,34 @@ $addressForm.addEventListener("submit", (event) => {
     AddressFormValidator($input);
   }
 
-  const numErrors = $addressForm.querySelectorAll(".input-warning").length;
+  /* When there are no warnings, it will switch to the next form by hidding the current one and unhidding the following one. */
+  const numWarnings = $addressForm.querySelectorAll(".input-warning").length;
 
-  if (numErrors === 0) {
-    /* Switch Form */
+  if (numWarnings === 0) {
     $addressForm.classList.add("is-hidden");
     $shippingForm.classList.remove("is-hidden");
+    $progressBar.value++;
+    $stage.classList.add("is-completed");
+  }
+});
+
+/* Reset Event */
+
+$addressForm.addEventListener("reset", (event) => {
+  event.preventDefault();
+
+  /* Remove warning messages. */
+  const $warningMessageList = $addressForm.querySelectorAll(".input-warning");
+
+  for (let i = 0; i < $warningMessageList.length; i++) {
+    $warningMessageList[i].remove();
+  }
+
+  /* Remove warning borders */
+  const $warningInputList = $addressForm.querySelectorAll(".input-warning-border");
+
+  for (let i = 0; i < $warningInputList.length; i++) {
+    $warningInputList[i].classList.remove("input-warning-border");
   }
 });
 

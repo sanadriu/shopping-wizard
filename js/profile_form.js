@@ -1,21 +1,32 @@
 // Variable Declaration
 
+// Input Elements
 let userName = document.getElementById("username");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confPass = document.getElementById("password_confirmation");
+
+// Form Elements
 let profileForm = document.getElementById("profile-form");
 let addressForm = document.getElementById("address-form");
+
+// Progress Bar Elements
+let progressBar = document.querySelector(".wizard__progress-bar");
+let stage = document.querySelector("[data-stage='1']");
+
+// Warning Box Elements
 let userNameWarning = document.getElementById("username-warning");
 let emailWarning = document.getElementById("email-warning");
 let passwordWarning = document.getElementById("password-warning");
 let confPassWarning = document.getElementById("confpass-warning");
-let nxtBtn = document.querySelector(".next-btn");
 
+// Input Valid Status
 let validUserName;
 let validEmail;
 let validPassword;
 let validConfPass;
+
+let nxtBtn = document.querySelector(".next-btn");
 
 // Regular Expression Declaration
 
@@ -97,5 +108,7 @@ function nextButtonSubmit(event) {
     console.log("hola");
     profileForm.classList.add("is-hidden");
     addressForm.classList.remove("is-hidden");
+    progressBar.value++;
+    stage.classList.add("is-completed");
   }
 }
