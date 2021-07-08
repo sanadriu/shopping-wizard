@@ -38,12 +38,12 @@ let premiumShippingDateFormat = premiumShippingDate.toUTCString();
 function setOrderDetails() {
   $finishContainer.querySelector(".finish-your-purchase__product-title").textContent = $main.dataset.productName;
   $finishContainer.querySelector(".finish-your-purchase__product-property--size").innerHTML = `Size: <b>${$main.dataset.productSize}</b>`;
-  $finishContainer.querySelector(".finish-your-purchase__product-property--color").innerHTML = `Color: <b>${$main.dataset.productColor}</b>`;
-  $finishContainer.querySelector(".finish-your-purchase__shipping-date > .currentDate").textContent = $currentDate.textContent || currentDateFormat;
-  $finishContainer.querySelector(".finish-your-purchase__shipping-date > .limitDate").textContent = $limitDate.textContent || freeShippingDateFormat;
+  $finishContainer.querySelector(".finish-your-purchase__product-property--color").innerHTML = `Color: <b>${$main.dataset.productColor.toUpperCase()}</b>`;
+  $finishContainer.querySelector(".finish-your-purchase__shipping-date > .currentDate").textContent = currentDateFormat;
+  $finishContainer.querySelector(".finish-your-purchase__shipping-date > .limitDate").textContent = $main.dataset.limitDate;
   $finishContainer.querySelector(".finish-your-purchase__price--product").innerHTML = `Cap price: <b>${$main.dataset.productPrice}</b>€`;
-  $finishContainer.querySelector(".finish-your-purchase__price--shipping").innerHTML = `Shipping cost: <b>${$main.dataset.shippingPrice || 0}</b>`;
-  $finishContainer.querySelector(".finish-your-purchase__price--total").innerHTML = `Total: <b>${parseFloat($main.dataset.productPrice) + (parseFloat($main.dataset.shippingPrice) || 0)}</b>`;
+  $finishContainer.querySelector(".finish-your-purchase__price--shipping").innerHTML = `Shipping cost: <b>${$main.dataset.shippingPrice || 0}</b>€`;
+  $finishContainer.querySelector(".finish-your-purchase__price--total").innerHTML = `Total: <b>${parseFloat($main.dataset.productPrice) + (parseFloat($main.dataset.shippingPrice) || 0)}</b>€`;
   $finishContainer.querySelector(".finish-your-purchase__product-image").setAttribute("src", $main.querySelector(".product__view-thumbnail").getAttribute("src"));
 }
 
@@ -68,6 +68,7 @@ $typeFree.addEventListener("click", (event) => {
   $currentDate.textContent = currentDateFormat;
   $limitDate.textContent = freeShippingDateFormat;
   $main.dataset.shippingPrice = $typeFree.value;
+  $main.dataset.limitDate = freeShippingDateFormat;
 });
 
 $typeExtra.addEventListener("click", (event) => {
@@ -75,6 +76,7 @@ $typeExtra.addEventListener("click", (event) => {
   $currentDate.textContent = currentDateFormat;
   $limitDate.textContent = extraShippingDateFormat;
   $main.dataset.shippingPrice = $typeExtra.value;
+  $main.dataset.limitDate = extraShippingDateFormat;
 });
 
 $typePremium.addEventListener("click", (event) => {
@@ -82,6 +84,7 @@ $typePremium.addEventListener("click", (event) => {
   $currentDate.textContent = currentDateFormat;
   $limitDate.textContent = premiumShippingDateFormat;
   $main.dataset.shippingPrice = $typePremium.value;
+  $main.dataset.limitDate = premiumShippingDateFormat;
 });
 
 /* Switch Form */

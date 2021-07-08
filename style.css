@@ -263,7 +263,7 @@ label {
 }
 
 .wizard__progress-bar::-webkit-progress-bar {
-  background-color: white;
+  background-color: #912323;
   box-shadow: inset 0 0 2px rgb(0, 0, 0);
 }
 
@@ -286,11 +286,11 @@ label {
 
 .stage-signal {
   margin: 0.8rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.4rem;
+  width: 1.4rem;
   border-radius: 100%;
-  border: 3px solid grey;
-  background-color: white;
+  border: 5px solid rgba(0, 0, 0, 20%);
+  background-color: #912323;
   z-index: 1;
 }
 
