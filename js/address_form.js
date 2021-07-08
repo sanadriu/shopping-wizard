@@ -124,7 +124,7 @@ $addressForm.addEventListener("submit", (event) => {
   /* When there are no warnings: */
   /* - It will switch to the next form by hidding the current one and unhidding the following one. */
   /* - The progress bar and the stage signal will be updated. */
-  /* - Address details will be added to the 'order' object. */
+  /* - Address details will be added to the 'order' object. -> Not implemented */
 
   const numWarnings = $addressForm.querySelectorAll(".input-warning").length;
 
@@ -133,18 +133,6 @@ $addressForm.addEventListener("submit", (event) => {
     $shippingForm.classList.remove("is-hidden");
     $progressBar.value++;
     $stage.classList.add("is-completed");
-
-    /*
-    for (let i = 0; i < $addressForm.elements.length; i++) {
-      const name = $addressForm.elements[i].name;
-      const value = $addressForm.elements[i].value;
-
-      order.address[name] = value;
-    }
-
-    console.log(order);
-
-    */
   }
 });
 

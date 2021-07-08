@@ -1,13 +1,5 @@
-var order = {
-  product: {
-    color: null,
-    size: null,
-    price: null,
-  },
-};
-
 /* Main DOM Elements */
-
+const $main = document.querySelector("main");
 const $product = document.querySelector(".product");
 const $wizard = document.querySelector(".wizard");
 const $productViewThumbnailList = $product.querySelectorAll(".product__view-thumbnail");
@@ -18,9 +10,9 @@ const $productViewImg = $product.querySelector(".product__primary-view-img");
 
 function setDefaults() {
   $productViewImg.setAttribute("src", $product.querySelector(".product__view-thumbnail.is-selected").getAttribute("src"));
-  order.product.color = $product.querySelector(".product__color-thumbnail.is-selected").dataset.color;
-  order.product.size = $product.querySelector(".product__size-select").value;
-  order.product.price = 30;
+  $main.dataset.productColor = $product.querySelector(".product__color-thumbnail.is-selected").dataset.color;
+  $main.dataset.productSize = $product.querySelector(".product__size-select").value;
+  $main.dataset.productPrice = 30;
 }
 
 function selectColor($element) {
@@ -30,12 +22,12 @@ function selectColor($element) {
   $element.classList.add("is-selected");
 
   $productViewThumbnailList.forEach(($productViewThumbnail) => {
-    $productViewThumbnail.setAttribute("src", $productViewThumbnail.getAttribute("src").replaceAll(order.product.color, color));
+    $productViewThumbnail.setAttribute("src", $productViewThumbnail.getAttribute("src").replaceAll($main.dataset.productColor, color));
   });
 
-  $productViewImg.setAttribute("src", $productViewImg.getAttribute("src").replaceAll(order.product.color, color));
+  $productViewImg.setAttribute("src", $productViewImg.getAttribute("src").replaceAll($main.dataset.productColor, color));
 
-  order.product.color = color;
+  $main.dataset.productColor = color;
 }
 
 function selectView($element) {
@@ -46,7 +38,7 @@ function selectView($element) {
 }
 
 function selectSize($element) {
-  order.product.size = $element.value;
+  $main.dataset.productSize = $element.value;
 }
 
 /* DOM Events */
@@ -71,7 +63,6 @@ $product.addEventListener("click", (event) => {
   if ($element.matches(".product__BuyBtn")) {
     $product.classList.add("is-hidden");
     $wizard.classList.remove("is-hidden");
-    console.log(order);
   }
 });
 
