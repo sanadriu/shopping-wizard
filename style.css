@@ -182,6 +182,10 @@ select {
   width: 15rem;
 }
 
+textarea {
+  resize: none;
+}
+
 select[name="phone_prefix"] {
   display: inline-block;
   width: 6rem;
@@ -323,6 +327,10 @@ label {
 }
 
 /* Others */
+
+.delivery_date {
+  display: inline-block;
+}
 
 .small {
   font-size: 0.8rem;

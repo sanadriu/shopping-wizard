@@ -155,16 +155,16 @@
                         <label for="typeExtra"><input type="radio" id="typeExtra" name="shipping" value="extra"/> Extra shipping (48h) <strong>4,99€</strong></label>
                         <label for="typePremium"><input type="radio" id="typePremium" name="shipping" value="premium"/> Premium (24h) <strong>9,99€</strong></label>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="delivery_date is-hidden">
                         <legend>Your order will arrive:</legend>
                         <p class="small">ESTIMATE DELIVERY DATE:</p>
-                        <p class="delivery_date small is-hidden">Between
-                            <strong id="current">[[Date-01]]</strong> and <strong id="later">[[Date-02]]</strong>.</p>
+                        <p class="small">Between
+                            <strong id="currentDate">[[Date-01]]</strong> and <strong id="limitDate">[[Date-02]]</strong>.</p>
                     </fieldset>
                     <label for="gift"><input type="checkbox" id ="gift" name="gift">Is it a gift?</label>
                     <fieldset>
                         <label for="giftMessage">Gift Message</label>
-                        <textarea id="giftMessage" name="gift-message" rows="6" cols="30"></textarea>
+                        <textarea id="giftMessage" name="gift-message" rows="6" cols="30" disabled></textarea>
                         <label for="gift-wrapper">Gift wrapper image</label>
                         <input type="file" id="gift-wrapper" name="gift-wrapper" />
                     </fieldset>

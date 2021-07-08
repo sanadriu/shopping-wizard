@@ -1,4 +1,4 @@
-const order = {
+var order = {
   product: {
     color: null,
     size: null,

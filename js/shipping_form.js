@@ -1,57 +1,52 @@
-//---------shipping -------------------------
-
-//--------------------------- text Enable/Disable-----------------------------------------------------------
-document.getElementById("giftMessage").setAttribute("disabled", true);
-document.getElementById("gift").onclick = function () {
-  document.getElementById("giftMessage").removeAttribute("disabled", true);
-};
-//-- -- -- -- -- -- -- -- - selección de botones-- -- -- -- -- -- -- -- -- -- -- -- -- -- -
-
 let $typeFree = document.getElementById("typeFree");
 let $typeExtra = document.getElementById("typeExtra");
 let $typePremium = document.getElementById("typePremium");
+let $isGiftChkBox = document.getElementById("gift");
+let $giftMessage = document.getElementById("giftMessage");
 
-console.log($typeFree, $typeExtra, $typePremium);
+/* --- Dates --- */
 
-//-------------------------------hora Actual -------------------------------------------------------------------
-let dateA = new Date();
-let dateActual = dateA.toUTCString();
-//------------------------------hora type free-------------------------------------------------------
-let freeLater = new Date();
-freeLater.setHours(freeLater.getHours() + 72);
-let freeLaterFormat = freeLater.toUTCString();
-//--------------------------------------hora type Extra-------------------------------------------------
-let extraLater = new Date();
-extraLater.setHours(extraLater.getHours() + 48);
-let extraLaterFormat = extraLater.toUTCString();
-//-------------------------------------- hora type Premium-----------------------------------------------
-let premiumLater = new Date();
-premiumLater.setHours(premiumLater.getHours() + 24);
-let premiumLaterFormat = premiumLater.toUTCString();
-// ------------------------------type Free------------------------------------------------------------------
-$typeFree.addEventListener("click", dateFree);
+let currentDate = new Date();
+let currentDateFormat = currentDate.toUTCString();
 
-function dateFree() {
-  let visibleDisplay = (document.querySelector(".delivery_date").style.display = "inline-block");
-  let actualHour = (document.getElementById("current").innerHTML = dateActual);
-  let laterHour = (document.getElementById("later").innerHTML = freeLaterFormat);
-}
+let freeShippingDate = new Date();
+freeShippingDate.setHours(freeShippingDate.getHours() + 72);
+let freeShippingDateFormat = freeShippingDate.toUTCString();
 
-//  -------------------------------type Extra------------------------------------------------------------------
-$typeExtra.addEventListener("click", dateExtra);
+let extraShippingDate = new Date();
+extraShippingDate.setHours(extraShippingDate.getHours() + 48);
+let extraShippingDateFormat = extraShippingDate.toUTCString();
 
-function dateExtra() {
-  document.querySelector(".delivery_date").style.display = "inline-block";
-  document.getElementById("current").innerHTML = dateActual;
-  document.getElementById("later").innerHTML = extraLaterFormat;
-}
+let premiumShippingDate = new Date();
+premiumShippingDate.setHours(premiumShippingDate.getHours() + 24);
+let premiumShippingDateFormat = premiumShippingDate.toUTCString();
 
-// ------------------------------type Premium---------------------------------------------------------------
+/* --- DOM Events --- */
 
-$typePremium.addEventListener("click", datePremium);
+//$giftMessage.setAttribute("disabled", true);
 
-function datePremium() {
-  document.querySelector(".delivery_date").style.display = "inline-block";
-  document.getElementById("current").innerHTML = dateActual;
-  document.getElementById("later").innerHTML = premiumLaterFormat;
-}
+$isGiftChkBox.addEventListener("click", (event) => {
+  if ($isGiftChkBox.checked) {
+    $giftMessage.removeAttribute("disabled");
+  } else {
+    $giftMessage.setAttribute("disabled", true);
+  }
+});
+
+$typeFree.addEventListener("click", (event) => {
+  document.querySelector(".delivery_date").classList.remove("is-hidden");
+  document.getElementById("currentDate").innerHTML = currentDateFormat;
+  document.getElementById("limitDate").innerHTML = freeShippingDateFormat;
+});
+
+$typeExtra.addEventListener("click", (event) => {
+  document.querySelector(".delivery_date").classList.remove("is-hidden");
+  document.getElementById("currentDate").innerHTML = currentDateFormat;
+  document.getElementById("limitDate").innerHTML = extraShippingDateFormat;
+});
+
+$typePremium.addEventListener("click", (event) => {
+  document.querySelector(".delivery_date").classList.remove("is-hidden");
+  document.getElementById("currentDate").innerHTML = currentDateFormat;
+  document.getElementById("limitDate").innerHTML = premiumShippingDateFormat;
+});
