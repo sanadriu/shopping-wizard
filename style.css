@@ -192,17 +192,6 @@ input[name="phone"] {
   width: 8.7rem;
 }
 
-.input-warning{
-  height: 1,5rem;
-  width: 12rem;
-  background-color: lightgray;
-  color: red;
-  font-size: 0.8rem;
-
-}
-
-
-
 label {
   display: block;
   font-weight: 600;
@@ -448,14 +437,15 @@ label {
 
 /* Error Styles */
 
-.error-message {
+.input-warning {
   width: 15rem;
   padding: 1rem;
   font-size: 0.8rem;
   color: red;
   background-color: #f9dddd;
+  margin-bottom: 0.5rem;
 }
 
-.error-border {
+.input-warning-border {
   border: 1px solid red;
 }

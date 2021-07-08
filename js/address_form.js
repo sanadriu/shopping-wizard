@@ -24,7 +24,7 @@ function showErrorMessage($input, wrongCases) {
   const name = $input.name;
 
   /* If there was printed an old error message, it will be removed to avoid message accumulation below the input. */
-  /* If the input has the error-border class, it will be removed. */
+  /* If the input has the input-warning-border class, it will be removed. */
 
   const $previousError = $addressForm.querySelector(`[data-input='${name}']`);
 
@@ -32,20 +32,20 @@ function showErrorMessage($input, wrongCases) {
     $previousError.remove();
   }
 
-  $input.classList.remove("error-border");
+  $input.classList.remove("input-warning-border");
 
   /* When a error message is returned, it will be printed just below the input that has fullfilled a wrong case. */
-  /* Also, the input will be given the error-border class. */
+  /* Also, the input will be given the input-warning-border class. */
 
-  let message = wrongCases(value);
+  let message = wrongCases(value); // WrongCases is a callback function that evaluates the value and returns a message if something is wrong.
 
   if (message) {
     const $error = document.createElement("p");
     $error.dataset.input = name;
-    $error.classList.add("error-message");
+    $error.classList.add("input-warning");
     $error.innerHTML = message;
     $input.insertAdjacentElement("afterend", $error);
-    $input.classList.add("error-border");
+    $input.classList.add("input-warning-border");
   }
 }
 
@@ -112,7 +112,7 @@ $addressForm.addEventListener("submit", (event) => {
     AddressFormValidator($input);
   }
 
-  const numErrors = $addressForm.querySelectorAll(".error-message").length;
+  const numErrors = $addressForm.querySelectorAll(".input-warning").length;
 
   if (numErrors === 0) {
     /* Switch Form */

@@ -35,58 +35,62 @@ function nextButtonSubmit(event) {
 
   if (userName.value === null || userName.value === "") {
     userNameWarning.innerHTML = "Please introduce an Username";
-    userNameWarning.classList.toggle("input-warning");
+    userNameWarning.classList.add("input-warning");
   } else if (userName.value.length < 5 || userName.value.length > 20) {
     userNameWarning.innerHTML = "Please introduce an Username between 5 and 20 characters ";
-    userNameWarning.classList.toggle("input-warning");
+    userNameWarning.classList.add("input-warning");
   } else if (!regExpLetterNumber.test(userName.value)) {
     userNameWarning.innerHTML = "Please only use letters and/or numbers ";
-    userNameWarning.classList.toggle("input-warning");
+    userNameWarning.classList.add("input-warning");
   } else {
     validUserName = true;
     userNameWarning.innerHTML = null;
+    userNameWarning.classList.remove("input-warning");
   }
 
   // Validate email
 
   if (email.value === null || email.value === "") {
     emailWarning.innerHTML = "Please introduce an email";
-    emailWarning.classList.toggle("input-warning");
+    emailWarning.classList.add("input-warning");
   } else if (email.value > 50) {
     emailWarning.innerHTML = "Email too Long";
-    emailWarning.classList.toggle("input-warning");
+    emailWarning.classList.add("input-warning");
   } else if (!regExpEmail.test(email.value)) {
     emailWarning.innerHTML = "Please introduce an valid Email";
-    emailWarning.classList.toggle("input-warning");
+    emailWarning.classList.add("input-warning");
   } else {
     validEmail = true;
     emailWarning.innerHTML = null;
+    emailWarning.classList.remove("input-warning");
   }
 
   // Validate Password
 
   if (password.value === null || password.value === "") {
     passwordWarning.innerHTML = "Please introduce a Password";
-    passwordWarning.classList.toggle("input-warning");
+    passwordWarning.classList.add("input-warning");
   } else if (!regExpPassword.test(password.value)) {
     passwordWarning.innerHTML = "Please introduce a valid Password";
-    passwordWarning.classList.toggle("input-warning");
+    passwordWarning.classList.add("input-warning");
   } else {
     validPassword = true;
     passwordWarning.innerHTML = null;
+    passwordWarning.classList.remove("input-warning");
   }
 
   // Validate Confirm Password
 
   if (confPass.value === null || confPass.value === "") {
     confPassWarning.innerHTML = "Please introduce a Password";
-    confPassWarning.classList.toggle("input-warning");
+    confPassWarning.classList.add("input-warning");
   } else if (validPassword == true && password.value != confPass.value) {
     confPassWarning.innerHTML = "Please introduce the same Password";
-    confPassWarning.classList.toggle("input-warning");
+    confPassWarning.classList.add("input-warning");
   } else {
     validConfPass = true;
     confPassWarning.innerHTML = null;
+    confPassWarning.classList.remove("input-warning");
   }
 
   if (validConfPass == true && validPassword == true && validEmail == true && validUserName == true) {
