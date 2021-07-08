@@ -428,7 +428,7 @@ label {
 /* States */
 
 .is-selected {
-  border: 1px solid grey;
+  box-shadow: 0 0 4px rgba(32, 32, 32, 0.5);
 }
 
 .is-hidden {

@@ -40,7 +40,6 @@ profileForm.addEventListener("submit", nextButtonSubmit);
 
 function nextButtonSubmit(event) {
   event.preventDefault();
-  console.log("enviando formulario");
 
   // Validate UserName
 
@@ -105,7 +104,6 @@ function nextButtonSubmit(event) {
   }
 
   if (validConfPass == true && validPassword == true && validEmail == true && validUserName == true) {
-    console.log("hola");
     profileForm.classList.add("is-hidden");
     addressForm.classList.remove("is-hidden");
     progressBar.value++;
