@@ -30,7 +30,7 @@
                 </ul>
             </div>
             <div class="product__primary-view">
-                <img class="product__primary-view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View"/>
+                <img class="product__primary-view-img" alt="Cap with adjustable closure, Primary View"/>
             </div>
             <div class="product__info">
                 <h2 class="product__title">Cap with adjustable closure</h2>
@@ -150,7 +150,7 @@
                 <form action="" id="shipping-form" class="wizard__form is-hidden">
                     <h1>Shipping</h1>
                     <fieldset>
-                        <legend>Shipping type (72H)</legend>
+                        <legend>Shipping type</legend>
                         <label for="typeFree"><input type="radio" id="typeFree" name="shipping" value="0"/> Free shipment (72H)</label>
                         <label for="typeExtra"><input type="radio" id="typeExtra" name="shipping" value="4.99"/> Extra shipping (48h) <strong>4,99€</strong></label>
                         <label for="typePremium"><input type="radio" id="typePremium" name="shipping" value="9.99"/> Premium (24h) <strong>9,99€</strong></label>
@@ -158,9 +158,7 @@
                     <fieldset class="delivery_date is-hidden">
                         <legend>Your order will arrive:</legend>
                         <p class="small">ESTIMATE DELIVERY DATE:</p>
-                        <p class="small">Between
-                            <strong id="currentDate">[[Date-01]]</strong> and <strong id="limitDate">[[Date-02]]</strong>.
-                        </p>
+                        <p class="small">Between <strong class="currentDate">[[Date-01]]</strong> and <strong class="limitDate">[[Date-02]]</strong>.</p>
                     </fieldset>
                     <label for="gift"><input type="checkbox" id ="gift" name="gift">Is it a gift?</label>
                     <fieldset>
@@ -181,16 +179,16 @@
                             <img class="finish-your-purchase__product-image" alt="purchased-product">
                             <div class="finish-your-purchase__product-description">
                                 <h2 class="finish-your-purchase__product-title">[[Title of the purchase]]</h2>
-                                <span class="finish-your-purchase__product-property">Size: [[size]]</span>
-                                <span class="finish-your-purchase__product-property">Color: [[color]]</span>
+                                <span class="finish-your-purchase__product-property finish-your-purchase__product-property--size">[[size]]</span>
+                                <span class="finish-your-purchase__product-property finish-your-purchase__product-property--color">[[color]]</span>
                                 <span class="tiny">ESTIMATE DELIVERY DATE:</span>
-                                <p class="finish-your-purchase__product-arrival">Between <strong>[[Date-01]]</strong> and <strong>[[Date-02]]</strong>.</p>
+                                <p class="finish-your-purchase__shipping-date">Between <strong class="currentDate">[[Date-01]]</strong> and <strong class="limitDate">[[Date-02]]</strong>.</p>
                             </div>
                         </div>
                         <form action="" id="finish-form">
                             <div class="finish-terms-and-conditions">
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">I have read and i accept the terms and conditions.<br>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox">I have read and I accept the terms and conditions.<br>
                                 </label>
                             </div>
                             <button class="finish-buyBtn">Buy now</button>
@@ -198,11 +196,12 @@
                     </div>
                     <div class="finish-your-order">
                         <h3>Payment details
-                            <hr>
+                        <hr>
                         </h3>
-                        <span>Cap: <b>[[Cap price €]]</b> <hr></span>
-                        <span>[[Type of shipping]]: <b>[[price]]</b><hr> </span>
-                        <span>Total:</span>
+                        <span class="finish-your-purchase__price finish-your-purchase__price--product">[[Cap price]]</span>
+                        <span class="finish-your-purchase__price finish-your-purchase__price--shipping">[[price]]</span>
+                        <hr>
+                        <span class="finish-your-purchase__price finish-your-purchase__price--total">[[Total]]</span>
                     </div>
                 </div>
             </section>

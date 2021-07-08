@@ -12,8 +12,8 @@ const $typePremium = $shippingForm.querySelector("#typePremium");
 const $isGiftChkBox = $shippingForm.querySelector("#gift");
 const $giftMessage = $shippingForm.querySelector("#giftMessage");
 const $giftWrapper = $shippingForm.querySelector("#giftWrapper");
-const $currentDate = $shippingForm.querySelector("#currentDate");
-const $limitDate = $shippingForm.querySelector("#limitDate");
+const $currentDate = $shippingForm.querySelector(".currentDate");
+const $limitDate = $shippingForm.querySelector(".limitDate");
 const $deliveryDateSection = $shippingForm.querySelector(".delivery_date");
 
 /* --- Dates --- */
@@ -33,6 +33,20 @@ let premiumShippingDate = new Date();
 premiumShippingDate.setHours(premiumShippingDate.getHours() + 24);
 let premiumShippingDateFormat = premiumShippingDate.toUTCString();
 
+/* --- Set Order Details --- */
+
+function setOrderDetails() {
+  $finishContainer.querySelector(".finish-your-purchase__product-title").textContent = $main.dataset.productName;
+  $finishContainer.querySelector(".finish-your-purchase__product-property--size").innerHTML = `Size: <b>${$main.dataset.productSize}</b>`;
+  $finishContainer.querySelector(".finish-your-purchase__product-property--color").innerHTML = `Color: <b>${$main.dataset.productColor}</b>`;
+  $finishContainer.querySelector(".finish-your-purchase__shipping-date > .currentDate").textContent = $currentDate.textContent || currentDateFormat;
+  $finishContainer.querySelector(".finish-your-purchase__shipping-date > .limitDate").textContent = $limitDate.textContent || freeShippingDateFormat;
+  $finishContainer.querySelector(".finish-your-purchase__price--product").innerHTML = `Cap price: <b>${$main.dataset.productPrice}</b>€`;
+  $finishContainer.querySelector(".finish-your-purchase__price--shipping").innerHTML = `Shipping cost: <b>${$main.dataset.shippingPrice || 0}</b>`;
+  $finishContainer.querySelector(".finish-your-purchase__price--total").innerHTML = `Total: <b>${parseFloat($main.dataset.productPrice) + (parseFloat($main.dataset.shippingPrice) || 0)}</b>`;
+  $finishContainer.querySelector(".finish-your-purchase__product-image").setAttribute("src", $main.querySelector(".product__view-thumbnail").getAttribute("src"));
+}
+
 /* --- DOM Events --- */
 
 /* Enable and disable gift options */
@@ -51,20 +65,23 @@ $isGiftChkBox.addEventListener("click", (event) => {
 
 $typeFree.addEventListener("click", (event) => {
   $deliveryDateSection.classList.remove("is-hidden");
-  $currentDate.innerHTML = currentDateFormat;
-  $limitDate.innerHTML = freeShippingDateFormat;
+  $currentDate.textContent = currentDateFormat;
+  $limitDate.textContent = freeShippingDateFormat;
+  $main.dataset.shippingPrice = $typeFree.value;
 });
 
 $typeExtra.addEventListener("click", (event) => {
   $deliveryDateSection.classList.remove("is-hidden");
-  $currentDate.innerHTML = currentDateFormat;
-  $limitDate.innerHTML = extraShippingDateFormat;
+  $currentDate.textContent = currentDateFormat;
+  $limitDate.textContent = extraShippingDateFormat;
+  $main.dataset.shippingPrice = $typeExtra.value;
 });
 
 $typePremium.addEventListener("click", (event) => {
   $deliveryDateSection.classList.remove("is-hidden");
-  $currentDate.innerHTML = currentDateFormat;
-  $limitDate.innerHTML = premiumShippingDateFormat;
+  $currentDate.textContent = currentDateFormat;
+  $limitDate.textContent = premiumShippingDateFormat;
+  $main.dataset.shippingPrice = $typePremium.value;
 });
 
 /* Switch Form */
@@ -77,7 +94,5 @@ $shippingForm.addEventListener("submit", (event) => {
   $progressBar.value++;
   $stage.classList.add("is-completed");
 
-  $main.dataset.currentDate = $currentDate.innerHTML || currentDateFormat;
-  $main.dataset.limitDate = $limitDate.innerHTML || freeShippingDateFormat;
-  $main.dataset.shippingPrice = $shippingForm.querySelector("[name='shipping']:checked")?.value || 0;
+  setOrderDetails();
 });

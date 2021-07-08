@@ -13,6 +13,7 @@ function setDefaults() {
   $main.dataset.productColor = $product.querySelector(".product__color-thumbnail.is-selected").dataset.color;
   $main.dataset.productSize = $product.querySelector(".product__size-select").value;
   $main.dataset.productPrice = 30;
+  $main.dataset.productName = "Cap with adjustable closure";
 }
 
 function selectColor($element) {

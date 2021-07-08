@@ -10,7 +10,7 @@ const $stage = document.querySelector("[data-stage='2']");
 const regExpressions = {
   name: /^([A-ZÀ-ŸÑ][-,a-za-ÿñ.']+\s*)+$/,
   date: /^\d{4}-\d{2}-\d{2}$/,
-  phone: /\d+$/,
+  phone: /^[0-9]+$/,
 };
 
 /* --- Phone Prefix Changer --- */
@@ -97,6 +97,7 @@ function AddressFormValidator($input) {
       showErrorMessage($input, (value) => {
         if (value.length === 0) return "Please enter the zipcode.";
         if (value.length > 5) return "Zipcode length must be less than 5.";
+        if (value < 0) return "Zipcode value cannot be negative";
       });
       break;
     case "phone":
