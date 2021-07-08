@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="js/product_page_interaction.js" type="module" defer></script>
     <script src="js/profile_form.js" type="module" defer></script>
     <script src="js/address_form.js" type="module" defer></script>
     <script src="js/shipping_form.js" type="module" defer></script>
+    <script src="js/finish_page.js" type="module" defer></script>
 </head>
 
 <body>
@@ -22,15 +23,15 @@
             <div class="product__view-thumbnails">
                 <ul class="product__view-thumbnail-list">
                     <li>
-                        <img class="product__view-thumbnail is-selected" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, 1st view"/>
+                        <img class="product__view-thumbnail is-selected" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, 1st view" />
                     </li>
                     <li>
-                        <img class="product__view-thumbnail" src="assets/images/product/black/cap-black-view2.webp" alt="Cap with adjustable closure, 2nd view"/>
+                        <img class="product__view-thumbnail" src="assets/images/product/black/cap-black-view2.webp" alt="Cap with adjustable closure, 2nd view" />
                     </li>
                 </ul>
             </div>
             <div class="product__primary-view">
-                <img class="product__primary-view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View"/>
+                <img class="product__primary-view-img" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, Primary View" />
             </div>
             <div class="product__info">
                 <h2 class="product__title">Cap with adjustable closure</h2>
@@ -47,22 +48,22 @@
                 <span class="product__property">Color</span>
                 <ul class="product__value product__color-thumbnail-list">
                     <li>
-                        <img class="product__color-thumbnail is-selected" data-color="black" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, black"/>
+                        <img class="product__color-thumbnail is-selected" data-color="black" src="assets/images/product/black/cap-black-view1.webp" alt="Cap with adjustable closure, black" />
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="brown" src="assets/images/product/brown/cap-brown-view1.webp" alt="Cap with adjustable closure, brown"/>
+                        <img class="product__color-thumbnail" data-color="brown" src="assets/images/product/brown/cap-brown-view1.webp" alt="Cap with adjustable closure, brown" />
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="navy" src="assets/images/product/navy/cap-navy-view1.webp" alt="Cap with adjustable closure, navy"/>
+                        <img class="product__color-thumbnail" data-color="navy" src="assets/images/product/navy/cap-navy-view1.webp" alt="Cap with adjustable closure, navy" />
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="olive" src="assets/images/product/olive/cap-olive-view1.webp" alt="Cap with adjustable closure, olive"/>
+                        <img class="product__color-thumbnail" data-color="olive" src="assets/images/product/olive/cap-olive-view1.webp" alt="Cap with adjustable closure, olive" />
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="red" src="assets/images/product/red/cap-red-view1.webp" alt="Cap with adjustable closure, red"/>
+                        <img class="product__color-thumbnail" data-color="red" src="assets/images/product/red/cap-red-view1.webp" alt="Cap with adjustable closure, red" />
                     </li>
                     <li>
-                        <img class="product__color-thumbnail" data-color="yellow" src="assets/images/product/yellow/cap-yellow-view1.webp" alt="Cap with adjustable closure, yellow"/>
+                        <img class="product__color-thumbnail" data-color="yellow" src="assets/images/product/yellow/cap-yellow-view1.webp" alt="Cap with adjustable closure, yellow" />
                     </li>
                 </ul>
                 <button class="product__BuyBtn">Buy</button>
@@ -94,36 +95,36 @@
                 <form action="" id="profile-form" class="wizard__form">
                     <h1 class="wizard__form-title">Profile</h1>
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username"/>
+                    <input type="text" id="username" name="username" />
                     <div id="username-warning"></div>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" maxlength="50"/>
+                    <input type="email" id="email" name="email" maxlength="50" />
                     <div id="email-warning"></div>
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" minlength="8" maxlength="20"/>
+                    <input type="password" id="password" name="password" minlength="8" maxlength="20" />
                     <div id="password-warning"></div>
                     <label for="password_confirmation">Password confirmation</label>
-                    <input type="password" id="password_confirmation" name="password" minlength="8" maxlength="20"/>
+                    <input type="password" id="password_confirmation" name="password" minlength="8" maxlength="20" />
                     <div id="confpass-warning"></div>
                     <div class="wizard__controls">
-                        <input type="reset" name="clear" value="Clear" class="wizard-btn clear-btn"/>
-                        <input type="submit" name="next" value="Next" class="wizard-btn next-btn"/>
+                        <input type="reset" name="clear" value="Clear" class="wizard-btn clear-btn" />
+                        <input type="submit" name="next" value="Next" class="wizard-btn next-btn" />
                     </div>
                 </form>
                 <form action="" id="address-form" class="wizard__form is-hidden">
                     <h1 class="wizard__form-title">Address</h1>
                     <label for="firstname">First name</label>
-                    <input type="text" id="firstname" name="firstname" maxlength="20"/>
+                    <input type="text" id="firstname" name="firstname" maxlength="20" />
                     <label for="lastname">Last name</label>
-                    <input type="text" id="lastname" name="lastname" maxlength="20"/>
+                    <input type="text" id="lastname" name="lastname" maxlength="20" />
                     <label for="birthdate">Birth Date</label>
-                    <input type="date" id="birthdate" name="birthdate"/>
+                    <input type="date" id="birthdate" name="birthdate" />
                     <label for="address_1">Address 1</label>
-                    <input type="text" id="address_1" name="address_1" maxlength="50"/>
+                    <input type="text" id="address_1" name="address_1" maxlength="50" />
                     <label for="address_2">Address 2</label>
-                    <input type="text" id="address_2" name="address_2" maxlength="50"/>
+                    <input type="text" id="address_2" name="address_2" maxlength="50" />
                     <label for="zipcode">Postal code</label>
-                    <input type="number" id="zipcode" name="zipcode" min="0" max="99999"/>
+                    <input type="number" id="zipcode" name="zipcode" min="0" max="99999" />
                     <label for="country">Country</label>
                     <select name="country">
                         <option value="Andorra">Andorra</option>
@@ -140,11 +141,11 @@
                         <option value="Germany">49 DEU</option>
                         <option value="Greece">30 GRC</option>
                     </select>
-                    <input type="tel" id="phone" name="phone" maxlength="9"/>
+                    <input type="tel" id="phone" name="phone" maxlength="9" />
                     <label for="is_regular_address"><input type="checkbox" name="is_regular_address" id="is_regular_address"/>This is my regular address</label>
                     <div class="wizard__controls">
-                        <input type="reset" name="clear" value="Clear" class="wizard-btn clear-btn"/>
-                        <input type="submit" name="next" value="Next" class="wizard-btn next-btn"/>
+                        <input type="reset" name="clear" value="Clear" class="wizard-btn clear-btn" />
+                        <input type="submit" name="next" value="Next" class="wizard-btn next-btn" />
                     </div>
                 </form>
                 <form action="" id="shipping-form" class="wizard__form is-hidden">
@@ -170,8 +171,8 @@
                         <input type="file" id="giftWrapper" name="gift-wrapper" disabled/>
                     </fieldset>
                     <div class="wizard__controls">
-                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn"/>
-                        <input type="submit" value="Next" class="wizard-btn next-btn"/>
+                        <input type="reset" value="Clear Form" class="wizard-btn clear-btn" />
+                        <input type="submit" value="Next" class="wizard-btn next-btn" />
                     </div>
                 </form>
                 <div class="finish-container wizard__form is-hidden">
@@ -187,14 +188,21 @@
                                 <p class="finish-your-purchase__product-arrival">Between <strong>[[Date-01]]</strong> and <strong>[[Date-02]]</strong>.</p>
                             </div>
                         </div>
-                        <form action="" id="finish-form">
+                        <div class="finish-div-to-remove">
                             <div class="finish-terms-and-conditions">
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">I have read and i accept the terms and conditions.<br>
+                                    <input type="checkbox" id="cbox2" value="first_checkbox">I have read and i accept the terms and conditions.<br>
                                 </label>
+                                <form action="" method="POST" onsubmit="return checkCheckBox(this)">
+                                    I accept: <input type="checkbox" value="0" name="agree">
+                                    <input type="submit" value="Continue Order">
+                                    <input type="button" value="Exit" onclick="document.location.href='/index.html';">
+                                </form>
+
                             </div>
-                            <button class="finish-buyBtn">Buy now</button>
-                        </form>
+                            <div id="terms-warning"></div>
+                            <button type="submit" class="finish-buyBtn">Buy now</button>
+                        </div>
                     </div>
                     <div class="finish-your-order">
                         <h3>Payment details
@@ -208,8 +216,8 @@
             </section>
         </div>
     </main>
-    <footer class="footer">
-        <h2 class="footer-text">Just a website developed without &#9829;</h2>
+    <footer class="footer ">
+        <h2 class="footer-text ">Just a website developed without &#9829;</h2>
     </footer>
 </body>
 
