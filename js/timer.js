@@ -16,69 +16,33 @@ const $progressBar = document.querySelector(".wizard__progress-bar");
 
 /* --- Timer Setup --- */
 
-const timerList = [];
+let time = 0;
+let timer;
 
 $ProductBuyBtn.addEventListener("click", (event) => {
-  for (let i = 0; i < 5; i++) {
-    if (i < 4) {
-      timerList[i] = setTimeout(() => {
-        $wizardTimer.innerHTML = `<p>You started registering <b>${i + 1} minutes ago.</b></p>`;
-        $wizardTimer.classList.remove("is-hidden");
+  timer = setInterval(() => {
+    time++;
+    $wizardTimer.classList.remove("is-hidden");
 
-        setTimeout(() => {
-          $wizardTimer.classList.add("is-hidden");
-        }, 5000);
-      }, 1000 * 60 * (i + 1));
+    if (time === 5) {
+      $wizardTimer.innerHTML = `<p>You started registering <b>${time} minutes ago</b>. Your time has exceded!</p>`;
     } else {
-      timerList[i] = setTimeout(() => {
-        $wizardTimer.innerHTML = `<p>You started registering <b>${i + 1} minutes ago. Your time has exceded!</b></p>`;
-        $wizardTimer.classList.remove("is-hidden");
-
-        setTimeout(() => {
-          $wizardTimer.classList.add("is-hidden");
-          location.reload();
-
-          /*
-          // Reset Forms
-
-          $profileForm.reset();
-          $addressForm.reset();
-          $shippingForm.reset();
-          $finishForm.reset();
-
-          // Hide Forms & Show Product Page
-
-          $product.classList.remove("is-hidden");
-          $wizard.classList.add("is-hidden");
-          $profileForm.classList.remove("is-hidden");
-          $addressForm.classList.add("is-hidden");
-          $shippingForm.classList.add("is-hidden");
-          $finishForm.classList.add("is-hidden");
-
-          // Reset Progress Visual Indicators
-
-          $progressBar.value = 0;
-
-          $stageList.forEach(($stage) => {
-            $stage.classList.remove("is-completed");
-          });
-
-          // Clear the timerList
-
-          for (let i = 0; i < 5; i++) {
-            timerList.pop();
-          }
-          */
-        }, 5000);
-      }, 1000 * 60 * (i + 1));
+      $wizardTimer.innerHTML = `<p>You started registering <b>${time} minutes ago</b>.</p>`;
     }
-  }
+
+    setTimeout(() => {
+      $wizardTimer.classList.add("is-hidden");
+
+      if (time === 5) {
+        clearInterval(timer);
+        location.reload();
+      }
+    }, 5000);
+  }, 1000 * 10);
 });
 
 $finishForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  timerList.forEach((timer) => {
-    clearTimeout(timer);
-  });
+  clearInterval(timer);
 });
