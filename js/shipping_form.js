@@ -103,5 +103,5 @@ $shippingForm.addEventListener("submit", (event) => {
 /* Reset Event */
 
 $shippingForm.addEventListener("reset", (event) => {
-  $deliveryDateSection.classList.remove("is-hidden");
+  $deliveryDateSection.classList.add("is-hidden");
 });

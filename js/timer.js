@@ -38,7 +38,7 @@ $ProductBuyBtn.addEventListener("click", (event) => {
         location.reload();
       }
     }, 5000);
-  }, 1000 * 10);
+  }, 1000 * 60);
 });
 
 $finishForm.addEventListener("submit", (event) => {
