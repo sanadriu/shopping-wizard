@@ -140,8 +140,6 @@ $addressForm.addEventListener("submit", (event) => {
 /* Reset Event */
 
 $addressForm.addEventListener("reset", (event) => {
-  event.preventDefault();
-
   /* Remove warning messages. */
   const $warningMessageList = $addressForm.querySelectorAll(".input-warning");
 

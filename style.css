@@ -129,7 +129,7 @@ main {
   cursor: pointer;
 }
 
-.product__BuyBtn {
+.product__buyBtn {
   border: none;
   outline: none;
   padding: 0.5rem;
@@ -143,7 +143,7 @@ main {
   transition: background 0.1s ease-in;
 }
 
-.product__BuyBtn:hover {
+.product__buyBtn:hover {
   background-color: #4d4d4d;
 }
 
@@ -207,8 +207,23 @@ label {
   box-shadow: 0 0 4px grey;
 }
 
+.wizard__forms {
+  position: relative;
+}
+
 .wizard__form {
   padding: 1rem 3rem;
+}
+
+.wizard__timer {
+  position: absolute;
+  bottom: 6rem;
+  right: 4rem;
+  box-shadow: 0 0 4px grey;
+  background-color: white;
+  padding: 1rem;
+  width: 180px;
+  font-size: 0.85rem;
 }
 
 .textarea {

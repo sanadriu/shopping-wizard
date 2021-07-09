@@ -61,7 +61,7 @@ $product.addEventListener("click", (event) => {
     return;
   }
 
-  if ($element.matches(".product__BuyBtn")) {
+  if ($element.matches(".product__buyBtn")) {
     $product.classList.add("is-hidden");
     $wizard.classList.remove("is-hidden");
   }
