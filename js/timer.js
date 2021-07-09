@@ -28,7 +28,7 @@ $ProductBuyBtn.addEventListener("click", (event) => {
         setTimeout(() => {
           $wizardTimer.classList.add("is-hidden");
         }, 5000);
-      }, 1000 * 60 * (i + 1));
+      }, 1000 * 6 * (i + 1));
     } else {
       timerList[i] = setTimeout(() => {
         $wizardTimer.innerHTML = `<p>You started registering <b>${i + 1} minutes ago. Your time has exceded!</b></p>`;
@@ -36,15 +36,17 @@ $ProductBuyBtn.addEventListener("click", (event) => {
 
         setTimeout(() => {
           $wizardTimer.classList.add("is-hidden");
+          location.reload();
 
-          /* Reset Forms */
+          /*
+          // Reset Forms
 
           $profileForm.reset();
           $addressForm.reset();
           $shippingForm.reset();
           $finishForm.reset();
 
-          /* Hide Forms & Show Product Page */
+          // Hide Forms & Show Product Page
 
           $product.classList.remove("is-hidden");
           $wizard.classList.add("is-hidden");
@@ -53,7 +55,7 @@ $ProductBuyBtn.addEventListener("click", (event) => {
           $shippingForm.classList.add("is-hidden");
           $finishForm.classList.add("is-hidden");
 
-          /* Reset Progress Visual Indicators */
+          // Reset Progress Visual Indicators
 
           $progressBar.value = 0;
 
@@ -61,13 +63,14 @@ $ProductBuyBtn.addEventListener("click", (event) => {
             $stage.classList.remove("is-completed");
           });
 
-          /* Clear the timerList */
+          // Clear the timerList
 
           for (let i = 0; i < 5; i++) {
             timerList.pop();
           }
+          */
         }, 5000);
-      }, 1000 * 60 * (i + 1));
+      }, 1000 * 6 * (i + 1));
     }
   }
 });
