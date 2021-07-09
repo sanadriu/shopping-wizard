@@ -28,7 +28,7 @@ $ProductBuyBtn.addEventListener("click", (event) => {
         setTimeout(() => {
           $wizardTimer.classList.add("is-hidden");
         }, 5000);
-      }, 1000 * 6 * (i + 1));
+      }, 1000 * 60 * (i + 1));
     } else {
       timerList[i] = setTimeout(() => {
         $wizardTimer.innerHTML = `<p>You started registering <b>${i + 1} minutes ago. Your time has exceded!</b></p>`;
@@ -70,7 +70,7 @@ $ProductBuyBtn.addEventListener("click", (event) => {
           }
           */
         }, 5000);
-      }, 1000 * 6 * (i + 1));
+      }, 1000 * 60 * (i + 1));
     }
   }
 });
