@@ -99,3 +99,9 @@ $shippingForm.addEventListener("submit", (event) => {
 
   setOrderDetails();
 });
+
+/* Reset Event */
+
+$shippingForm.addEventListener("reset", (event) => {
+  $deliveryDateSection.classList.add("is-hidden");
+});
