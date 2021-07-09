@@ -11,6 +11,7 @@
     <script src="js/profile_form.js" type="module" defer></script>
     <script src="js/address_form.js" type="module" defer></script>
     <script src="js/shipping_form.js" type="module" defer></script>
+    <script src="js/finish_form.js" type="module" defer></script>
 </head>
 
 <body>
@@ -188,8 +189,9 @@
                         <form action="" id="finish-form">
                             <div class="finish-terms-and-conditions">
                                 <label>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">I have read and I accept the terms and conditions.<br>
+                                    <input type="checkbox" id="termsChkBox">I have read and I accept the terms and conditions.<br>
                                 </label>
+                                <p id="terms-warning"></p>
                             </div>
                             <button class="finish-buyBtn">Buy now</button>
                         </form>

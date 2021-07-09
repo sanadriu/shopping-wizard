@@ -87,7 +87,7 @@ $typePremium.addEventListener("click", (event) => {
   $main.dataset.limitDate = premiumShippingDateFormat;
 });
 
-/* Switch Form */
+/* Submit Event */
 
 $shippingForm.addEventListener("submit", (event) => {
   event.preventDefault();

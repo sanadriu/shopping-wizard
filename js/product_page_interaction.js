@@ -1,4 +1,4 @@
-/* Main DOM Elements */
+/* --- Main DOM Elements --- */
 const $main = document.querySelector("main");
 const $product = document.querySelector(".product");
 const $wizard = document.querySelector(".wizard");
@@ -6,7 +6,7 @@ const $productViewThumbnailList = $product.querySelectorAll(".product__view-thum
 const $productColorThumbnailList = $product.querySelectorAll(".product__color-thumbnail");
 const $productViewImg = $product.querySelector(".product__primary-view-img");
 
-/* Product Page Functionality */
+/* --- Product Page Functionality --- */
 
 function setDefaults() {
   $productViewImg.setAttribute("src", $product.querySelector(".product__view-thumbnail.is-selected").getAttribute("src"));
@@ -42,7 +42,7 @@ function selectSize($element) {
   $main.dataset.productSize = $element.value;
 }
 
-/* DOM Events */
+/* --- DOM Events --- */
 
 document.addEventListener("DOMContentLoaded", (event) => {
   setDefaults();

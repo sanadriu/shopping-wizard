@@ -379,14 +379,18 @@ label {
   width: 60%;
 }
 
-.finish-your-purchase__product-property,
-.finish-your-purchase__price {
+.finish-your-purchase__product-property {
   margin-bottom: 1rem;
   display: block;
 }
 
+.finish-your-purchase__price {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
 .finish-your-purchase__shipping-date {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .finish-your-purchase__product-title {
